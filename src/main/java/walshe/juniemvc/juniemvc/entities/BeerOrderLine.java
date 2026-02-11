@@ -23,10 +23,10 @@ public class BeerOrderLine extends BaseEntity {
     private String status;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "beer_order_id")
+    @JoinColumn(name = "beer_order_id", nullable = false)
     private BeerOrder beerOrder;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "beer_id")
+    @JoinColumn(name = "beer_id", nullable = false)
     private Beer beer;
 }

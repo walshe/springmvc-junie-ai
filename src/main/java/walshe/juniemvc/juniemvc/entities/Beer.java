@@ -35,6 +35,7 @@ public class Beer extends BaseEntity {
         this.beerOrderLines = beerOrderLines != null ? beerOrderLines : new HashSet<>();
     }
 
+    @jakarta.persistence.Column(nullable = false)
     private String beerName;
     private String beerStyle;
     private String upc;
