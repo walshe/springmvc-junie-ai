@@ -1,4 +1,5 @@
 /Users/Emmett/dev/juniemvc/juniemvc/src/test/java/walshe/juniemvc/juniemvc/JuniemvcApplicationTests.java
 /Users/Emmett/dev/juniemvc/juniemvc/src/test/java/walshe/juniemvc/juniemvc/controllers/BeerControllerTest.java
+/Users/Emmett/dev/juniemvc/juniemvc/src/test/java/walshe/juniemvc/juniemvc/controllers/BeerOrderControllerTest.java
 /Users/Emmett/dev/juniemvc/juniemvc/src/test/java/walshe/juniemvc/juniemvc/repositories/BeerRepositoryTest.java
 /Users/Emmett/dev/juniemvc/juniemvc/src/test/java/walshe/juniemvc/juniemvc/services/BeerServiceTest.java

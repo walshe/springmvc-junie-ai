@@ -1,35 +1,39 @@
 package walshe.juniemvc.juniemvc.entities;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Version;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
-@Builder
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Beer {
+public class Beer extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
-    @Version
-    private Integer version;
+    @Builder
+    public Beer(Integer id, Integer version, java.time.LocalDateTime createdDate, java.time.LocalDateTime updateDate,
+                String beerName, String beerStyle, String upc, Integer quantityOnHand, BigDecimal price,
+                Set<BeerOrderLine> beerOrderLines) {
+        super.setId(id);
+        super.setVersion(version);
+        super.setCreatedDate(createdDate);
+        super.setUpdateDate(updateDate);
+        this.beerName = beerName;
+        this.beerStyle = beerStyle;
+        this.upc = upc;
+        this.quantityOnHand = quantityOnHand;
+        this.price = price;
+        this.beerOrderLines = beerOrderLines != null ? beerOrderLines : new HashSet<>();
+    }
 
     private String beerName;
     private String beerStyle;
@@ -37,9 +41,6 @@ public class Beer {
     private Integer quantityOnHand;
     private BigDecimal price;
 
-    @CreationTimestamp
-    private LocalDateTime createdDate;
-
-    @UpdateTimestamp
-    private LocalDateTime updateDate;
+    @OneToMany(mappedBy = "beer")
+    private Set<BeerOrderLine> beerOrderLines = new HashSet<>();
 }
