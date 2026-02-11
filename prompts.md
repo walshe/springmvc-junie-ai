@@ -4,3 +4,4 @@
 
 3. inspect the beer controller, add API endpoints for update and delete. Create new service methods. Add additional mock MVC tests for the new API operations. create a unit test to test all service operations
 
+4. Analyze the project structure and tech stack and generate a `.junie/guidelines.md` file with consise well structired information to help new developers. Include a guidance on organizinfg the structure, runnign tests , executing scripts and following best practices. Keep the content short, clear and practical. 
