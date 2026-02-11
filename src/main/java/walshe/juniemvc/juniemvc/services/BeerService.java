@@ -1,14 +1,14 @@
 package walshe.juniemvc.juniemvc.services;
 
-import walshe.juniemvc.juniemvc.entities.Beer;
+import walshe.juniemvc.juniemvc.models.BeerDto;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface BeerService {
-    List<Beer> listBeers();
-    Optional<Beer> getBeerById(Integer id);
-    Beer saveNewBeer(Beer beer);
-    void updateBeerById(Integer beerId, Beer beer);
+    List<BeerDto> listBeers();
+    Optional<BeerDto> getBeerById(Integer id);
+    BeerDto saveNewBeer(BeerDto beerDto);
+    void updateBeerById(Integer beerId, BeerDto beerDto);
     void deleteById(Integer beerId);
 }

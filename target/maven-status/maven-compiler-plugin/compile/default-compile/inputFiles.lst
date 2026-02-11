@@ -1,0 +1,8 @@
+/Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/JuniemvcApplication.java
+/Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/controllers/BeerController.java
+/Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/entities/Beer.java
+/Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/mappers/BeerMapper.java
+/Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/models/BeerDto.java
+/Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/repositories/BeerRepository.java
+/Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/services/BeerService.java
+/Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/services/BeerServiceImpl.java

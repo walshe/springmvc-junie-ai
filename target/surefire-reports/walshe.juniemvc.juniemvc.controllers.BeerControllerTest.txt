@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: walshe.juniemvc.juniemvc.controllers.BeerControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.526 s -- in walshe.juniemvc.juniemvc.controllers.BeerControllerTest

@@ -10,8 +10,12 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import walshe.juniemvc.juniemvc.entities.Beer;
+import walshe.juniemvc.juniemvc.models.BeerDto;
 import walshe.juniemvc.juniemvc.repositories.BeerRepository;
 
+import java.math.BigDecimal;
+
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.core.Is.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -60,13 +64,20 @@ class BeerControllerTest {
 
     @Test
     void testCreateBeer() throws Exception {
-        Beer beer = Beer.builder().beerName("New Beer").build();
+        BeerDto beerDto = BeerDto.builder()
+                .beerName("New Beer")
+                .beerStyle("PALE_ALE")
+                .upc("123")
+                .price(new BigDecimal("1.99"))
+                .quantityOnHand(10)
+                .build();
 
         mockMvc.perform(post("/api/v1/beer")
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(beer)))
-                .andExpect(status().isCreated());
+                .content(objectMapper.writeValueAsString(beerDto)))
+                .andExpect(status().isCreated())
+                .andExpect(header().string("Location", containsString("/api/v1/beer/")));
     }
 
     @Test
@@ -75,12 +86,18 @@ class BeerControllerTest {
                 .beerName("Update Me")
                 .build());
 
-        Beer beer = Beer.builder().beerName("Updated Beer").build();
+        BeerDto beerDto = BeerDto.builder()
+                .beerName("Updated Beer")
+                .beerStyle("PALE_ALE")
+                .upc("999")
+                .price(new BigDecimal("2.49"))
+                .quantityOnHand(5)
+                .build();
 
         mockMvc.perform(put("/api/v1/beer/" + saved.getId())
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(beer)))
+                .content(objectMapper.writeValueAsString(beerDto)))
                 .andExpect(status().isNoContent());
     }
 

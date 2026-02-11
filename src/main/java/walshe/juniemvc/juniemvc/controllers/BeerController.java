@@ -1,46 +1,56 @@
 package walshe.juniemvc.juniemvc.controllers;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import walshe.juniemvc.juniemvc.entities.Beer;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import walshe.juniemvc.juniemvc.models.BeerDto;
 import walshe.juniemvc.juniemvc.services.BeerService;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/beer")
-public class BeerController {
+@Validated
+class BeerController {
 
     private final BeerService beerService;
 
     @GetMapping
-    public List<Beer> listBeers() {
+    List<BeerDto> listBeers() {
         return beerService.listBeers();
     }
 
     @GetMapping("/{beerId}")
-    public Beer getBeerById(@PathVariable("beerId") Integer beerId) {
+    BeerDto getBeerById(@PathVariable("beerId") Integer beerId) {
         return beerService.getBeerById(beerId).orElseThrow(RuntimeException::new);
     }
 
     @PostMapping
-    public ResponseEntity handlePost(@RequestBody Beer beer) {
-        Beer savedBeer = beerService.saveNewBeer(beer);
-        return new ResponseEntity(HttpStatus.CREATED);
+    ResponseEntity<BeerDto> handlePost(@Valid @RequestBody BeerDto beerDto) {
+        BeerDto savedBeer = beerService.saveNewBeer(beerDto);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(savedBeer.getId())
+                .toUri();
+        return ResponseEntity.created(location).body(savedBeer);
     }
 
     @PutMapping("/{beerId}")
-    public ResponseEntity updateById(@PathVariable("beerId") Integer beerId, @RequestBody Beer beer) {
-        beerService.updateBeerById(beerId, beer);
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+    ResponseEntity<Void> updateById(@PathVariable("beerId") Integer beerId, @Valid @RequestBody BeerDto beerDto) {
+        beerService.updateBeerById(beerId, beerDto);
+        return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{beerId}")
-    public ResponseEntity deleteById(@PathVariable("beerId") Integer beerId) {
+    ResponseEntity<Void> deleteById(@PathVariable("beerId") Integer beerId) {
         beerService.deleteById(beerId);
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+        return ResponseEntity.noContent().build();
     }
 }
