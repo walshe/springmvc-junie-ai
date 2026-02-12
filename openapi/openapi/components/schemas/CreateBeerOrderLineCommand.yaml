@@ -1,0 +1,17 @@
+type: object
+required:
+  - beerId
+  - orderQuantity
+properties:
+  beerId:
+    type: integer
+    format: int32
+    description: Identifier of the beer to order.
+    minimum: 1
+    example: 1
+  orderQuantity:
+    type: integer
+    format: int32
+    description: Quantity of the beer to order.
+    minimum: 1
+    example: 2

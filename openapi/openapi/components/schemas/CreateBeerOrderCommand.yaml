@@ -1,0 +1,16 @@
+type: object
+required:
+  - customerRef
+  - beerOrderLines
+properties:
+  customerRef:
+    type: string
+    description: Client-provided reference identifier for the order (e.g., purchase order number).
+    minLength: 1
+    example: "REF-001"
+  beerOrderLines:
+    type: array
+    description: Line items for the order.
+    minItems: 1
+    items:
+      $ref: './CreateBeerOrderLineCommand.yaml'

@@ -1,0 +1,26 @@
+parameters:
+  - name: orderId
+    in: path
+    description: Identifier of the beer order.
+    required: true
+    schema:
+      type: integer
+      format: int32
+    example: 101
+get:
+  tags:
+    - BeerOrder
+  summary: Get beer order by ID
+  description: Retrieve a single beer order by its identifier.
+  operationId: getBeerOrderById
+  security: []
+  responses:
+    '200':
+      description: Successfully retrieved the beer order.
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/BeerOrder.yaml'
+    '404':
+      description: Beer order not found
+      $ref: ../components/responses/Problem.yaml

@@ -1,0 +1,51 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+    description: Unique identifier for the beer order.
+    readOnly: true
+    example: 101
+  version:
+    type: integer
+    format: int32
+    description: Version number for optimistic locking.
+    readOnly: true
+    example: 0
+  customerRef:
+    type: string
+    description: Client-provided reference identifier for the order (e.g., purchase order number).
+    minLength: 1
+    example: "REF-001"
+  paymentAmount:
+    type: number
+    format: double
+    description: Total payment amount in USD for the entire order.
+    minimum: 0
+    readOnly: true
+    example: 19.98
+  status:
+    type: string
+    description: Overall status of the order.
+    enum:
+      - PENDING
+      - DELIVERED
+    example: PENDING
+  beerOrderLines:
+    type: array
+    description: Line items in this order.
+    minItems: 1
+    items:
+      $ref: './BeerOrderLine.yaml'
+  createdDate:
+    type: string
+    format: date-time
+    description: The date and time when the order was created.
+    readOnly: true
+    example: "2025-10-27T10:00:00Z"
+  updateDate:
+    type: string
+    format: date-time
+    description: The date and time when the order was last updated.
+    readOnly: true
+    example: "2025-10-27T10:00:00Z"

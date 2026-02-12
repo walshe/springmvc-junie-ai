@@ -1,0 +1,56 @@
+get:
+  tags:
+    - BeerOrder
+  summary: List beer orders
+  description: Retrieve a list of beer orders.
+  operationId: listBeerOrders
+  security: []
+  responses:
+    '200':
+      description: Successfully retrieved list of beer orders.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/BeerOrder.yaml'
+    '400':
+      description: Bad request
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - BeerOrder
+  summary: Create a beer order
+  description: Create a new beer order.
+  operationId: createBeerOrder
+  security: []
+  requestBody:
+    required: true
+    description: Command object containing the order details to create.
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/CreateBeerOrderCommand.yaml'
+        examples:
+          simple:
+            value:
+              customerRef: "REF-001"
+              beerOrderLines:
+                - beerId: 1
+                  orderQuantity: 2
+  responses:
+    '201':
+      description: Beer order created successfully.
+      headers:
+        Location:
+          description: URI of the created resource.
+          schema:
+            type: string
+            format: uri
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/BeerOrder.yaml'
+    '400':
+      description: Bad request
+      $ref: ../components/responses/Problem.yaml
