@@ -1,0 +1,70 @@
+get:
+  tags:
+    - Beer
+  summary: Get beer by ID
+  description: Returns a single beer record based on its unique identifier.
+  operationId: getBeerById
+  security: []
+  parameters:
+    - name: beerId
+      in: path
+      required: true
+      description: The unique identifier of the beer.
+      schema:
+        type: integer
+        format: int32
+  responses:
+    '200':
+      description: The requested beer.
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Beer.yaml'
+    '404':
+      $ref: '../components/responses/Problem.yaml'
+put:
+  tags:
+    - Beer
+  summary: Update an existing beer
+  description: Updates an existing beer record based on its unique identifier.
+  operationId: updateById
+  security: []
+  parameters:
+    - name: beerId
+      in: path
+      required: true
+      description: The unique identifier of the beer to update.
+      schema:
+        type: integer
+        format: int32
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/Beer.yaml'
+  responses:
+    '204':
+      description: Beer updated.
+    '404':
+      $ref: '../components/responses/Problem.yaml'
+delete:
+  tags:
+    - Beer
+  summary: Delete a beer
+  description: Deletes a beer record based on its unique identifier.
+  operationId: deleteById
+  security: []
+  parameters:
+    - name: beerId
+      in: path
+      required: true
+      description: The unique identifier of the beer to delete.
+      schema:
+        type: integer
+        format: int32
+  responses:
+    '204':
+      description: Beer deleted.
+    '404':
+      $ref: '../components/responses/Problem.yaml'
