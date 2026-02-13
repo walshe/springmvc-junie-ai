@@ -7,7 +7,7 @@
 [INFO]
 [INFO] --- resources:3.3.1:resources (default-resources) @ juniemvc ---
 [INFO] Copying 1 resource from src/main/resources to target/classes
-[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from src/main/resources to target/classes
 [INFO]
 [INFO] --- compiler:3.14.1:compile (default-compile) @ juniemvc ---
 [INFO] Nothing to compile - all classes are up to date.
@@ -24,9 +24,9 @@
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest
-10:56:10.445 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest]: CustomerRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10:56:10.669 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest
+[INFO] Running walshe.juniemvc.juniemvc.JuniemvcApplicationTests
+11:52:49.312 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.JuniemvcApplicationTests]: JuniemvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:52:49.445 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.JuniemvcApplicationTests
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -34,26 +34,27 @@
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v4.0.2)
-2026-02-13T10:56:11.469Z  INFO 35777 --- [           main] w.j.j.r.CustomerRepositoryTest           : Starting CustomerRepositoryTest using Java 21.0.2 with PID 35777 (started by Emmett in /Users/Emmett/dev/juniemvc/juniemvc)
-2026-02-13T10:56:11.471Z  INFO 35777 --- [           main] w.j.j.r.CustomerRepositoryTest           : The following 1 profile is active: "test"
-2026-02-13T10:56:13.163Z  INFO 35777 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-13T10:56:13.421Z  INFO 35777 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 232 ms. Found 4 JPA repository interfaces.
-2026-02-13T10:56:15.014Z  INFO 35777 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-02-13T10:56:15.414Z  INFO 35777 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-13T10:56:15.417Z  INFO 35777 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-02-13T10:56:15.545Z  INFO 35777 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.4)
-2026-02-13T10:56:15.562Z  WARN 35777 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
-2026-02-13T10:56:15.621Z  INFO 35777 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
-2026-02-13T10:56:15.629Z  INFO 35777 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.033s)
-2026-02-13T10:56:15.647Z  INFO 35777 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
-2026-02-13T10:56:15.733Z  INFO 35777 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
-2026-02-13T10:56:15.761Z  INFO 35777 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - init database"
-2026-02-13T10:56:15.833Z  INFO 35777 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add customer"
-2026-02-13T10:56:15.866Z  INFO 35777 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.065s)
-2026-02-13T10:56:16.024Z  INFO 35777 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-13T10:56:16.143Z  INFO 35777 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-13T10:56:17.160Z  INFO 35777 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-13T10:56:17.261Z  INFO 35777 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-02-13T11:52:49.972Z  INFO 41617 --- [           main] w.j.juniemvc.JuniemvcApplicationTests    : Starting JuniemvcApplicationTests using Java 21.0.2 with PID 41617 (started by Emmett in /Users/Emmett/dev/juniemvc/juniemvc)
+2026-02-13T11:52:49.974Z  INFO 41617 --- [           main] w.j.juniemvc.JuniemvcApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-02-13T11:52:50.821Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-13T11:52:50.904Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 5 JPA repository interfaces.
+2026-02-13T11:52:51.648Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-13T11:52:51.850Z  INFO 41617 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-02-13T11:52:51.852Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-13T11:52:51.911Z  INFO 41617 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.4)
+2026-02-13T11:52:51.919Z  WARN 41617 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026-02-13T11:52:51.949Z  INFO 41617 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-02-13T11:52:51.952Z  INFO 41617 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.016s)
+2026-02-13T11:52:51.963Z  INFO 41617 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-02-13T11:52:52.010Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-02-13T11:52:52.025Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - init database"
+2026-02-13T11:52:52.057Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add customer"
+2026-02-13T11:52:52.075Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - add beer order shipment"
+2026-02-13T11:52:52.096Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.042s)
+2026-02-13T11:52:52.193Z  INFO 41617 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-13T11:52:52.261Z  INFO 41617 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-13T11:52:52.854Z  INFO 41617 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-13T11:52:52.949Z  INFO 41617 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
         Database JDBC URL [jdbc:h2:mem:testdb]
         Database driver: H2 JDBC Driver
         Database dialect: H2Dialect
@@ -65,46 +66,42 @@
         Pool: DataSourceConnectionProvider
         Minimum pool size: undefined/unknown
         Maximum pool size: undefined/unknown
-2026-02-13T10:56:19.117Z  INFO 35777 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-13T10:56:19.161Z  INFO 35777 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-13T10:56:19.404Z  INFO 35777 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-13T10:56:20.579Z  WARN 35777 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-13T10:56:21.562Z  INFO 35777 --- [           main] w.j.j.r.CustomerRepositoryTest           : Started CustomerRepositoryTest in 10.594 seconds (process running for 12.692)
+2026-02-13T11:52:54.185Z  INFO 41617 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-13T11:52:54.215Z  INFO 41617 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-13T11:52:54.306Z  INFO 41617 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-13T11:52:54.794Z  WARN 41617 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-13T11:52:55.301Z  INFO 41617 --- [           main] w.j.juniemvc.JuniemvcApplicationTests    : Started JuniemvcApplicationTests in 5.641 seconds (process running for 7.198)
 Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
 WARNING: A Java agent has been loaded dynamically (/Users/Emmett/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
 WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
-Hibernate: insert into customer (address_line_1,address_line_2,city,created_date,email,name,phone_number,postal_code,state,update_date,version,id) values (?,?,?,?,?,?,?,?,?,?,?,default)
-Hibernate: select c1_0.id,c1_0.address_line_1,c1_0.address_line_2,c1_0.city,c1_0.created_date,c1_0.email,c1_0.name,c1_0.phone_number,c1_0.postal_code,c1_0.state,c1_0.update_date,c1_0.version from customer c1_0 where c1_0.id=?
-Hibernate: insert into customer (address_line_1,address_line_2,city,created_date,email,name,phone_number,postal_code,state,update_date,version,id) values (?,?,?,?,?,?,?,?,?,?,?,default)
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.60 s -- in walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest
-[INFO] Running walshe.juniemvc.juniemvc.mappers.CustomerMapperTest
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in walshe.juniemvc.juniemvc.mappers.CustomerMapperTest
-[INFO] Running walshe.juniemvc.juniemvc.controllers.CustomerControllerTest
-2026-02-13T10:56:23.085Z  INFO 35777 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T10:56:23.086Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T10:56:23.106Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 13 ms
-2026-02-13T10:56:23.644Z  INFO 35777 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T10:56:23.645Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T10:56:23.645Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T10:56:23.685Z  INFO 35777 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T10:56:23.685Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T10:56:23.685Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T10:56:23.745Z  INFO 35777 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T10:56:23.745Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T10:56:23.745Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T10:56:23.884Z  INFO 35777 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T10:56:23.884Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T10:56:23.885Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T10:56:23.963Z  INFO 35777 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T10:56:23.963Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T10:56:23.964Z  INFO 35777 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.315 s -- in walshe.juniemvc.juniemvc.controllers.CustomerControllerTest
-[INFO] Running walshe.juniemvc.juniemvc.controllers.CustomerControllerIT
-2026-02-13T10:56:23.995Z  INFO 35777 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.controllers.CustomerControllerIT]: CustomerControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-13T10:56:24.040Z  INFO 35777 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.controllers.CustomerControllerIT
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.695 s -- in walshe.juniemvc.juniemvc.JuniemvcApplicationTests
+[INFO] Running walshe.juniemvc.juniemvc.repositories.BeerOrderShipmentRepositoryTest
+2026-02-13T11:52:55.800Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.repositories.BeerOrderShipmentRepositoryTest]: BeerOrderShipmentRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-13T11:52:55.816Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.repositories.BeerOrderShipmentRepositoryTest
+Hibernate: insert into beer_order (created_date,customer_id,customer_ref,payment_amount,status,update_date,version,id) values (?,?,?,?,?,?,?,default)
+Hibernate: insert into beer_order_shipment (beer_order_id,carrier,created_date,shipment_date,tracking_number,update_date,version,id) values (?,?,?,?,?,?,?,default)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.213 s -- in walshe.juniemvc.juniemvc.repositories.BeerOrderShipmentRepositoryTest
+[INFO] Running walshe.juniemvc.juniemvc.repositories.BeerRepositoryTest
+2026-02-13T11:52:56.017Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.repositories.BeerRepositoryTest]: BeerRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-13T11:52:56.020Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.repositories.BeerRepositoryTest
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: update beer set beer_name=?,beer_style=?,price=?,quantity_on_hand=?,upc=?,update_date=?,version=? where id=? and version=?
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: delete from beer where id=? and version=?
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.159 s -- in walshe.juniemvc.juniemvc.repositories.BeerRepositoryTest
+[INFO] Running walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest
+2026-02-13T11:52:56.178Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest]: CustomerRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-13T11:52:56.180Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -112,25 +109,21 @@ Hibernate: insert into customer (address_line_1,address_line_2,city,created_date
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v4.0.2)
-2026-02-13T10:56:24.184Z  INFO 35777 --- [           main] w.j.j.controllers.CustomerControllerIT   : Starting CustomerControllerIT using Java 21.0.2 with PID 35777 (started by Emmett in /Users/Emmett/dev/juniemvc/juniemvc)
-2026-02-13T10:56:24.185Z  INFO 35777 --- [           main] w.j.j.controllers.CustomerControllerIT   : The following 1 profile is active: "test"
-2026-02-13T10:56:24.693Z  INFO 35777 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-13T10:56:24.729Z  INFO 35777 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
-2026-02-13T10:56:25.391Z  INFO 35777 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
-2026-02-13T10:56:25.445Z  INFO 35777 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-13T10:56:25.446Z  INFO 35777 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-13T10:56:25.538Z  INFO 35777 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1343 ms
-2026-02-13T10:56:25.751Z  INFO 35777 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-02-13T10:56:25.753Z  INFO 35777 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2026-02-13T10:56:25.755Z  INFO 35777 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-02-13T10:56:25.759Z  INFO 35777 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.4)
-2026-02-13T10:56:25.763Z  WARN 35777 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
-2026-02-13T10:56:25.778Z  INFO 35777 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.011s)
-2026-02-13T10:56:25.786Z  INFO 35777 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 2
-2026-02-13T10:56:25.787Z  INFO 35777 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
-2026-02-13T10:56:25.832Z  INFO 35777 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-13T10:56:25.880Z  INFO 35777 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-13T10:56:25.883Z  INFO 35777 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-02-13T11:52:56.217Z  INFO 41617 --- [           main] w.j.j.r.CustomerRepositoryTest           : Starting CustomerRepositoryTest using Java 21.0.2 with PID 41617 (started by Emmett in /Users/Emmett/dev/juniemvc/juniemvc)
+2026-02-13T11:52:56.218Z  INFO 41617 --- [           main] w.j.j.r.CustomerRepositoryTest           : The following 1 profile is active: "test"
+2026-02-13T11:52:56.379Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-13T11:52:56.399Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+2026-02-13T11:52:56.500Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-02-13T11:52:56.501Z  INFO 41617 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-02-13T11:52:56.502Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-02-13T11:52:56.503Z  INFO 41617 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.4)
+2026-02-13T11:52:56.506Z  WARN 41617 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026-02-13T11:52:56.512Z  INFO 41617 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.003s)
+2026-02-13T11:52:56.516Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 3
+2026-02-13T11:52:56.516Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2026-02-13T11:52:56.537Z  INFO 41617 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-13T11:52:56.557Z  INFO 41617 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-13T11:52:56.559Z  INFO 41617 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
         Database JDBC URL [jdbc:h2:mem:testdb]
         Database driver: H2 JDBC Driver
         Database dialect: H2Dialect
@@ -142,293 +135,174 @@ Hibernate: insert into customer (address_line_1,address_line_2,city,created_date
         Pool: DataSourceConnectionProvider
         Minimum pool size: undefined/unknown
         Maximum pool size: undefined/unknown
-2026-02-13T10:56:26.078Z  INFO 35777 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-13T10:56:26.083Z  INFO 35777 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-13T10:56:26.289Z  WARN 35777 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-13T10:56:26.697Z  INFO 35777 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 64930 (http) with context path '/'
-2026-02-13T10:56:26.701Z  INFO 35777 --- [           main] w.j.j.controllers.CustomerControllerIT   : Started CustomerControllerIT in 2.641 seconds (process running for 17.832)
-2026-02-13T10:56:26.709Z  WARN 35777 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [walshe.juniemvc.juniemvc.controllers.CustomerControllerIT@1d18e5ad]
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'walshe.juniemvc.juniemvc.controllers.CustomerControllerIT': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:766) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:402) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:156) ~[spring-test-7.0.3.jar:7.0.3]
-        at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111) ~[spring-test-7.0.3.jar:7.0.3]
-        at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-7.0.3.jar:7.0.3]
-        at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:205) ~[spring-test-7.0.3.jar:7.0.3]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$1(ClassBasedTestDescriptor.java:423) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:428) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$0(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
-        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-        at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
-        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-        at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
-        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
-        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-        at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$0(ClassBasedTestDescriptor.java:334) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:333) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$1(ClassBasedTestDescriptor.java:322) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$0(ClassBasedTestDescriptor.java:321) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:127) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:126) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$0(NodeTestTask.java:144) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:144) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:110) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-        at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-        at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.4.jar:3.5.4]
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2297) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1725) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763) ~[spring-beans-7.0.3.jar:7.0.3]
-        ... 88 common frames omitted
-2026-02-13T10:56:26.743Z  WARN 35777 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [walshe.juniemvc.juniemvc.controllers.CustomerControllerIT@f93030a]
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'walshe.juniemvc.juniemvc.controllers.CustomerControllerIT': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:766) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:402) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:156) ~[spring-test-7.0.3.jar:7.0.3]
-        at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111) ~[spring-test-7.0.3.jar:7.0.3]
-        at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-7.0.3.jar:7.0.3]
-        at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:205) ~[spring-test-7.0.3.jar:7.0.3]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$1(ClassBasedTestDescriptor.java:423) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:428) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$0(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
-        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-        at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
-        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-        at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
-        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
-        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-        at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$0(ClassBasedTestDescriptor.java:334) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:333) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$1(ClassBasedTestDescriptor.java:322) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-        at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$0(ClassBasedTestDescriptor.java:321) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:127) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:126) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$0(NodeTestTask.java:144) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:144) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:110) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
-        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-        at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-        at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.4.jar:3.5.4]
-        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.4.jar:3.5.4]
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2297) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1725) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.3.jar:7.0.3]
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763) ~[spring-beans-7.0.3.jar:7.0.3]
-        ... 88 common frames omitted
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.771 s <<< FAILURE! -- in walshe.juniemvc.juniemvc.controllers.CustomerControllerIT
-[ERROR] walshe.juniemvc.juniemvc.controllers.CustomerControllerIT.testListCustomers -- Time elapsed: 0.005 s <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'walshe.juniemvc.juniemvc.controllers.CustomerControllerIT': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:766)
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
-        at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:402)
-        at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:156)
-        at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111)
-        at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-        at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:205)
-        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-        at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-        at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-        at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-        at java.base/java.util.Optional.orElseGet(Optional.java:364)
-        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2297)
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1725)
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763)
-        ... 23 more
-[ERROR] walshe.juniemvc.juniemvc.controllers.CustomerControllerIT.testCreateCustomer -- Time elapsed: 0.002 s <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'walshe.juniemvc.juniemvc.controllers.CustomerControllerIT': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:766)
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
-        at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:402)
-        at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:156)
-        at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111)
-        at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-        at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:205)
-        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-        at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-        at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-        at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-        at java.base/java.util.Optional.orElseGet(Optional.java:364)
-        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2297)
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1725)
-        at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
-        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763)
-        ... 23 more
+2026-02-13T11:52:56.650Z  INFO 41617 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-13T11:52:56.652Z  INFO 41617 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-13T11:52:56.770Z  WARN 41617 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-13T11:52:56.894Z  INFO 41617 --- [           main] w.j.j.r.CustomerRepositoryTest           : Started CustomerRepositoryTest in 0.707 seconds (process running for 8.79)
+Hibernate: insert into customer (address_line_1,address_line_2,city,created_date,email,name,phone_number,postal_code,state,update_date,version,id) values (?,?,?,?,?,?,?,?,?,?,?,default)
+Hibernate: select c1_0.id,c1_0.address_line_1,c1_0.address_line_2,c1_0.city,c1_0.created_date,c1_0.email,c1_0.name,c1_0.phone_number,c1_0.postal_code,c1_0.state,c1_0.update_date,c1_0.version from customer c1_0 where c1_0.id=?
+Hibernate: insert into customer (address_line_1,address_line_2,city,created_date,email,name,phone_number,postal_code,state,update_date,version,id) values (?,?,?,?,?,?,?,?,?,?,?,default)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.774 s -- in walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest
+[INFO] Running walshe.juniemvc.juniemvc.mappers.BeerOrderShipmentMapperTest
+2026-02-13T11:52:56.952Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.mappers.BeerOrderShipmentMapperTest]: BeerOrderShipmentMapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-13T11:52:56.962Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.mappers.BeerOrderShipmentMapperTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s -- in walshe.juniemvc.juniemvc.mappers.BeerOrderShipmentMapperTest
+[INFO] Running walshe.juniemvc.juniemvc.mappers.CustomerMapperTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in walshe.juniemvc.juniemvc.mappers.CustomerMapperTest
+[INFO] Running walshe.juniemvc.juniemvc.controllers.BeerOrderControllerTest
+2026-02-13T11:52:57.008Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.controllers.BeerOrderControllerTest]: BeerOrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-13T11:52:57.017Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.controllers.BeerOrderControllerTest
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v4.0.2)
+2026-02-13T11:52:57.048Z  INFO 41617 --- [           main] w.j.j.c.BeerOrderControllerTest          : Starting BeerOrderControllerTest using Java 21.0.2 with PID 41617 (started by Emmett in /Users/Emmett/dev/juniemvc/juniemvc)
+2026-02-13T11:52:57.049Z  INFO 41617 --- [           main] w.j.j.c.BeerOrderControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2026-02-13T11:52:57.173Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-13T11:52:57.185Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 5 JPA repository interfaces.
+2026-02-13T11:52:57.381Z  INFO 41617 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-02-13T11:52:57.398Z  INFO 41617 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-13T11:52:57.398Z  INFO 41617 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-13T11:52:57.445Z  INFO 41617 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 395 ms
+2026-02-13T11:52:57.539Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-02-13T11:52:57.540Z  INFO 41617 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2026-02-13T11:52:57.540Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-02-13T11:52:57.541Z  INFO 41617 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.4)
+2026-02-13T11:52:57.543Z  WARN 41617 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026-02-13T11:52:57.548Z  INFO 41617 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.003s)
+2026-02-13T11:52:57.551Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 3
+2026-02-13T11:52:57.552Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2026-02-13T11:52:57.568Z  INFO 41617 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-13T11:52:57.588Z  INFO 41617 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-13T11:52:57.589Z  INFO 41617 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+        Database JDBC URL [jdbc:h2:mem:testdb]
+        Database driver: H2 JDBC Driver
+        Database dialect: H2Dialect
+        Database version: 2.4.240
+        Default catalog/schema: TESTDB/PUBLIC
+        Autocommit mode: undefined/unknown
+        Isolation level: READ_COMMITTED [default READ_COMMITTED]
+        JDBC fetch size: 100
+        Pool: DataSourceConnectionProvider
+        Minimum pool size: undefined/unknown
+        Maximum pool size: undefined/unknown
+2026-02-13T11:52:57.671Z  INFO 41617 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-13T11:52:57.675Z  INFO 41617 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-13T11:52:57.786Z  WARN 41617 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-13T11:52:57.915Z  INFO 41617 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 49276 (http) with context path '/'
+2026-02-13T11:52:57.917Z  INFO 41617 --- [           main] w.j.j.c.BeerOrderControllerTest          : Started BeerOrderControllerTest in 0.895 seconds (process running for 9.814)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0
+Hibernate: delete from beer where id=? and version=?
+Hibernate: delete from beer where id=? and version=?
+Hibernate: delete from beer where id=? and version=?
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+2026-02-13T11:52:58.599Z  INFO 41617 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-13T11:52:58.599Z  INFO 41617 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-13T11:52:58.601Z  INFO 41617 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: insert into beer_order (created_date,customer_id,customer_ref,payment_amount,status,update_date,version,id) values (?,?,?,?,?,?,?,default)
+Hibernate: insert into beer_order_line (beer_id,beer_order_id,created_date,order_quantity,quantity_allocated,status,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select bo1_0.id,bol1_0.beer_order_id,bol1_0.id,bol1_0.beer_id,b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version,bol1_0.created_date,bol1_0.order_quantity,bol1_0.quantity_allocated,bol1_0.status,bol1_0.update_date,bol1_0.version,bo1_0.created_date,bo1_0.customer_id,bo1_0.customer_ref,bo1_0.payment_amount,bo1_0.status,bo1_0.update_date,bo1_0.version from beer_order bo1_0 left join beer_order_line bol1_0 on bo1_0.id=bol1_0.beer_order_id left join beer b1_0 on b1_0.id=bol1_0.beer_id where bo1_0.id=?
+Hibernate: select bo1_0.id,bo1_0.created_date,bo1_0.customer_id,bo1_0.customer_ref,bo1_0.payment_amount,bo1_0.status,bo1_0.update_date,bo1_0.version from beer_order bo1_0
+Hibernate: select bol1_0.beer_order_id,bol1_0.id,bol1_0.beer_id,bol1_0.created_date,bol1_0.order_quantity,bol1_0.quantity_allocated,bol1_0.status,bol1_0.update_date,bol1_0.version from beer_order_line bol1_0 where bol1_0.beer_order_id=?
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.270 s -- in walshe.juniemvc.juniemvc.controllers.BeerOrderControllerTest
+[INFO] Running walshe.juniemvc.juniemvc.controllers.CustomerControllerTest
+2026-02-13T11:52:59.532Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.533Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:52:59.533Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:52:59.698Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.698Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:52:59.698Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:52:59.725Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.726Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:52:59.726Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:52:59.747Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.747Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:52:59.748Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:52:59.780Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.780Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:52:59.780Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:52:59.810Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.810Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:52:59.810Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.535 s -- in walshe.juniemvc.juniemvc.controllers.CustomerControllerTest
+[INFO] Running walshe.juniemvc.juniemvc.controllers.BeerControllerTest
+2026-02-13T11:52:59.823Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.controllers.BeerControllerTest]: BeerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-13T11:52:59.826Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.controllers.BeerControllerTest
+2026-02-13T11:52:59.842Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.842Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:52:59.844Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+2026-02-13T11:52:59.890Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.891Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:52:59.894Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: update beer set beer_name=?,beer_style=?,price=?,quantity_on_hand=?,upc=?,update_date=?,version=? where id=? and version=?
+2026-02-13T11:52:59.975Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.975Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:52:59.977Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0
+2026-02-13T11:52:59.998Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:52:59.999Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:53:00.003Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+2026-02-13T11:53:00.030Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:53:00.031Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:53:00.033Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: delete from beer where id=? and version=?
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.228 s -- in walshe.juniemvc.juniemvc.controllers.BeerControllerTest
+[INFO] Running walshe.juniemvc.juniemvc.controllers.BeerOrderShipmentControllerTest
+2026-02-13T11:53:00.128Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:53:00.128Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:53:00.128Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:53:00.160Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:53:00.161Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:53:00.161Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:53:00.185Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:53:00.185Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:53:00.185Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:53:00.210Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:53:00.211Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:53:00.211Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:53:00.236Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:53:00.236Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:53:00.236Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-13T11:53:00.265Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2026-02-13T11:53:00.266Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-13T11:53:00.266Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.222 s -- in walshe.juniemvc.juniemvc.controllers.BeerOrderShipmentControllerTest
+[INFO] Running walshe.juniemvc.juniemvc.services.BeerServiceTest
+2026-02-13T11:53:00.275Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.services.BeerServiceTest]: BeerServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-13T11:53:00.298Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.services.BeerServiceTest
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: delete from beer where id=? and version=?
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: update beer set beer_name=?,beer_style=?,price=?,quantity_on_hand=?,upc=?,update_date=?,version=? where id=? and version=?
+Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
+Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 s -- in walshe.juniemvc.juniemvc.services.BeerServiceTest
 [INFO]
 [INFO] Results:
 [INFO]
-[ERROR] Errors:
-[ERROR]   CustomerControllerIT.testCreateCustomer » UnsatisfiedDependency Error creating bean with name 'walshe.juniemvc.juniemvc.controllers.CustomerControllerIT': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-[ERROR]   CustomerControllerIT.testListCustomers » UnsatisfiedDependency Error creating bean with name 'walshe.juniemvc.juniemvc.controllers.CustomerControllerIT': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-[INFO]
-[ERROR] Tests run: 14, Failures: 0, Errors: 2, Skipped: 0
+[INFO] Tests run: 38, Failures: 0, Errors: 0, Skipped: 0
 [INFO]
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.965 s
-[INFO] Finished at: 2026-02-13T10:56:26Z
+[INFO] Total time:  14.573 s
+[INFO] Finished at: 2026-02-13T11:53:00Z
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.4:test (default-test) on project juniemvc:
-[ERROR]
-[ERROR] See /Users/Emmett/dev/juniemvc/juniemvc/target/surefire-reports for the individual test results.
-[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

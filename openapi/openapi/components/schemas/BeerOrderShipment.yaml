@@ -1,0 +1,28 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+    readOnly: true
+  version:
+    type: integer
+    format: int32
+    readOnly: true
+  beerOrderId:
+    type: integer
+    format: int32
+  shipmentDate:
+    type: string
+    format: date-time
+  carrier:
+    type: string
+  trackingNumber:
+    type: string
+  createdDate:
+    type: string
+    format: date-time
+    readOnly: true
+  updateDate:
+    type: string
+    format: date-time
+    readOnly: true

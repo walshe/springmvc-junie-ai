@@ -1,0 +1,46 @@
+get:
+  tags:
+    - BeerOrderShipment
+  summary: List all shipments
+  description: Returns a list of all beer order shipments in the system.
+  operationId: listShipments
+  security: []
+  responses:
+    '200':
+      description: A list of shipments.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/BeerOrderShipment.yaml'
+    '400':
+      $ref: '../components/responses/Problem.yaml'
+post:
+  tags:
+    - BeerOrderShipment
+  summary: Create a new shipment
+  description: Creates a new beer order shipment record in the system.
+  operationId: createShipment
+  security: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/BeerOrderShipment.yaml'
+  responses:
+    '201':
+      description: Shipment created.
+      headers:
+        Location:
+          description: URL of the created shipment.
+          schema:
+            type: string
+            format: uri
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/BeerOrderShipment.yaml'
+    '400':
+      $ref: '../components/responses/Problem.yaml'
