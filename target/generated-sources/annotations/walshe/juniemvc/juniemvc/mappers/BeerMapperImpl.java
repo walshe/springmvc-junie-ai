@@ -7,8 +7,8 @@ import walshe.juniemvc.juniemvc.models.BeerDto;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-02-11T20:24:15+0000",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.2 (Oracle Corporation)"
+    date = "2026-02-13T10:47:39+0000",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.2 (Amazon.com Inc.)"
 )
 @Component
 public class BeerMapperImpl implements BeerMapper {

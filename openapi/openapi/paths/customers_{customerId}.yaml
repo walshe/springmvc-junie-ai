@@ -1,0 +1,70 @@
+get:
+  summary: Get Customer by ID
+  operationId: getCustomerById
+  tags:
+    - Customer
+  security: []
+  parameters:
+    - name: customerId
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int32
+  responses:
+    '200':
+      description: Customer found
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Customer.yaml'
+    '400':
+      $ref: '../components/responses/Problem.yaml'
+    '404':
+      description: Customer not found
+put:
+  summary: Update Customer
+  operationId: updateCustomer
+  tags:
+    - Customer
+  security: []
+  parameters:
+    - name: customerId
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int32
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/UpdateCustomerCommand.yaml'
+  responses:
+    '204':
+      description: Customer updated
+    '400':
+      $ref: '../components/responses/Problem.yaml'
+    '404':
+      description: Customer not found
+delete:
+  summary: Delete Customer
+  operationId: deleteCustomer
+  tags:
+    - Customer
+  security: []
+  parameters:
+    - name: customerId
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int32
+  responses:
+    '204':
+      description: Customer deleted
+    '400':
+      $ref: '../components/responses/Problem.yaml'
+    '404':
+      description: Customer not found

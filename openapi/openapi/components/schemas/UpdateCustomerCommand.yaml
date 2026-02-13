@@ -1,0 +1,32 @@
+type: object
+required:
+  - name
+  - address_line_1
+  - city
+  - state
+  - postal_code
+properties:
+  name:
+    type: string
+    maxLength: 255
+  email:
+    type: string
+    maxLength: 255
+  phone_number:
+    type: string
+    maxLength: 255
+  address_line_1:
+    type: string
+    maxLength: 255
+  address_line_2:
+    type: string
+    maxLength: 255
+  city:
+    type: string
+    maxLength: 255
+  state:
+    type: string
+    maxLength: 255
+  postal_code:
+    type: string
+    maxLength: 255

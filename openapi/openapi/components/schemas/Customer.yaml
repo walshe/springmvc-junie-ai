@@ -1,0 +1,48 @@
+type: object
+required:
+  - name
+  - address_line_1
+  - city
+  - state
+  - postal_code
+properties:
+  id:
+    type: integer
+    format: int32
+    readOnly: true
+  version:
+    type: integer
+    format: int32
+    readOnly: true
+  name:
+    type: string
+    maxLength: 255
+  email:
+    type: string
+    maxLength: 255
+  phone_number:
+    type: string
+    maxLength: 255
+  address_line_1:
+    type: string
+    maxLength: 255
+  address_line_2:
+    type: string
+    maxLength: 255
+  city:
+    type: string
+    maxLength: 255
+  state:
+    type: string
+    maxLength: 255
+  postal_code:
+    type: string
+    maxLength: 255
+  created_date:
+    type: string
+    format: date-time
+    readOnly: true
+  update_date:
+    type: string
+    format: date-time
+    readOnly: true
