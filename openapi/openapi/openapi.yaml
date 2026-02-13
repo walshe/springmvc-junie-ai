@@ -66,9 +66,7 @@ x-tagGroups:
       - Echo
       - Beer
       - BeerOrder
-  - name: Administration
-    tags:
-      - Admin
+
 servers:
   - url: https://{tenant}/api/v1
     variables:
@@ -77,16 +75,6 @@ servers:
         description: Your tenant id
   - url: https://example.com/api/v1
 paths:
-  '/users/{username}':
-    $ref: 'paths/users_{username}.yaml'
-  '/user':
-    $ref: 'paths/user.yaml'
-  '/user/list':
-    $ref: 'paths/user-status.yaml'
-  /pathItem:
-    $ref: paths/pathItem.yaml
-  /pathItemWithExamples:
-    $ref: paths/pathItemWithExamples.yaml
   '/api/v1/beer':
     $ref: 'paths/beer.yaml'
   '/api/v1/beer/{beerId}':
@@ -95,8 +83,7 @@ paths:
     $ref: 'paths/beerOrder.yaml'
   '/api/v1/beerOrder/{orderId}':
     $ref: 'paths/beerOrder_{orderId}.yaml'
-  '/echo':
-    $ref: 'paths/echo.yaml'
+
 components:
   securitySchemes:
     main_auth:
@@ -116,21 +103,3 @@ components:
     basic_auth:
       type: http
       scheme: basic
-webhooks:
-  userInfo:
-    post:
-      summary: New user webhook
-      description: "Information about a new user in the system."
-      operationId: userInfo
-      tags:
-        - Info
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: 'components/schemas/User.yaml'
-      responses:
-        '200':
-          description: "Successfully retrieved information about a new user."
-      security:
-        - api_key: []
