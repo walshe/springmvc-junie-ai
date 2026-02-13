@@ -24,12 +24,15 @@ public class BeerDto {
     @NotBlank
     private String beerName;
 
+    // style of beer, ALE, PALE ALE, IPA, STOUT
     @NotBlank
     private String beerStyle;
 
+    // Universal product code, a 13 digit number assigned to each unique beer
     @NotBlank
     private String upc;
 
+    //
     @NotNull
     @Min(0)
     private Integer quantityOnHand;

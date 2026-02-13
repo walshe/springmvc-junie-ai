@@ -12,12 +12,22 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BeerOrderLineDto {
+
+    // read only
     private Integer id;
     private Integer version;
+
+
     private Integer beerId;
+
+
     private Integer orderQuantity;
     private Integer quantityAllocated;
+
+    // status of this line item PENDING, DELIVERED
     private String status;
+
+    // read only
     private LocalDateTime createdDate;
     private LocalDateTime updateDate;
 }

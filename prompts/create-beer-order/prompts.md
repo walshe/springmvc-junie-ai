@@ -26,3 +26,4 @@ using [x]. As each step is completed, it is very important to update the task li
 -----------------------------------------
 
 Inspect junie/guidelines.md. Add a brief section about Flyway migrations with Spring Boot. Include information about the default directory and version naming.
+

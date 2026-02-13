@@ -18,17 +18,21 @@ import java.time.LocalDateTime;
 @Setter
 public abstract class BaseEntity {
 
+    // read only
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    // read only
     @Version
     private Integer version;
 
+    // read only
     @CreationTimestamp
     @Column(updatable = false)
     private LocalDateTime createdDate;
 
+    // read only
     @UpdateTimestamp
     private LocalDateTime updateDate;
 }
