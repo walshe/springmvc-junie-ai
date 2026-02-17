@@ -87,3 +87,22 @@ Write the plan to prompts/plan.md file.
 -------------------------------------
 
 Create a detailed enumerated task list according to the suggested enhancements plan in prompts/plan.md Task items should have a placeholder [ ] for marking as done [x] upon task completion. Write the task list to prompts/tasks.md file.
+
+
+--------------------------------------------
+
+Complete the task list prompts/tasks.md. Use information from prompts/requirements.md and prompts/plan.md for additional context when completing the tasks.
+
+Implement the tasks in the task list. Focus on completing the tasks in order. Mark the task complete as it is done using [x]. As each step is completed, it is very important to update the task list mark and the task as done [x].
+
+----------------------------------------------
+
+RUN THIS IN ASK MODE Inspect the files prompts/requirements.md and prompts/plan.md. These changes have been implemented in the project. Review the project as needed. Plan additional sections in the guideline.md file for the changes which have been implemented in the project. Include instructions for the project structure, and for building and testing the frontend project. Also identify any best practices used for the front end code.
+
+CHANGE BACK TO CODE MODE The frontend project has build errors. Fix errors, verify tests are passing.
+
+The command npm test is failing, fix test errors, verify all tests are passing
+
+The command npm line is shows lint errors, inspect the lint errors and fix, verify there are no lint errors
+
+Update eslint configuration to disable the warning for Unused eslint-disable directive

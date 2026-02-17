@@ -14,8 +14,8 @@ import walshe.juniemvc.juniemvc.models.PatchBeerOrderCommand;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-02-17T12:16:02+0000",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.2 (Oracle Corporation)"
+    date = "2026-02-17T17:13:32+0000",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.2 (Amazon.com Inc.)"
 )
 @Component
 public class BeerOrderMapperImpl implements BeerOrderMapper {

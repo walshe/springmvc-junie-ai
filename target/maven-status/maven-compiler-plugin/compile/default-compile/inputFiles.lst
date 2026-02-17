@@ -21,6 +21,7 @@
 /Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/models/CreateBeerOrderShipmentCommand.java
 /Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/models/CreateCustomerCommand.java
 /Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/models/CustomerDto.java
+/Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/models/PatchBeerOrderCommand.java
 /Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/models/UpdateBeerOrderShipmentCommand.java
 /Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/models/UpdateCustomerCommand.java
 /Users/Emmett/dev/juniemvc/juniemvc/src/main/java/walshe/juniemvc/juniemvc/repositories/BeerOrderLineRepository.java

@@ -38,6 +38,7 @@ walshe/juniemvc/juniemvc/services/BeerOrderService.class
 walshe/juniemvc/juniemvc/models/CustomerDto$CustomerDtoBuilder.class
 walshe/juniemvc/juniemvc/services/BeerOrderShipmentServiceImpl.class
 walshe/juniemvc/juniemvc/repositories/BeerOrderShipmentRepository.class
+walshe/juniemvc/juniemvc/models/PatchBeerOrderCommand.class
 walshe/juniemvc/juniemvc/models/BeerDto$BeerDtoBuilder.class
 walshe/juniemvc/juniemvc/entities/BeerOrder.class
 walshe/juniemvc/juniemvc/mappers/BeerMapper.class
