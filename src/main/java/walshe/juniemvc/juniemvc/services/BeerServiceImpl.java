@@ -27,18 +27,33 @@ class BeerServiceImpl implements BeerService {
 
     @Override
     @Transactional(readOnly = true)
-    public Page<BeerDto> listBeers(String beerName, Integer pageNumber, Integer pageSize) {
+    public Page<BeerDto> listBeers(java.util.Optional<String> beerName, java.util.Optional<String> beerStyle, Integer pageNumber, Integer pageSize) {
         Pageable pageable = buildPageRequest(pageNumber, pageSize);
+
+        String name = beerName.filter(StringUtils::hasText).orElse(null);
+        String style = beerStyle.filter(StringUtils::hasText).orElse(null);
 
         Page<Beer> beerPage;
 
-        if (StringUtils.hasText(beerName)) {
-            beerPage = listBeersByName(beerName, pageable);
+        if (name != null && style != null) {
+            beerPage = listBeersByNameAndStyle(name, style, pageable);
+        } else if (name != null) {
+            beerPage = listBeersByName(name, pageable);
+        } else if (style != null) {
+            beerPage = listBeersByStyle(style, pageable);
         } else {
             beerPage = beerRepository.findAll(pageable);
         }
 
         return beerPage.map(beerMapper::beerToBeerDto);
+    }
+
+    private Page<Beer> listBeersByNameAndStyle(String beerName, String beerStyle, Pageable pageable) {
+        return beerRepository.findAllByBeerNameIsLikeIgnoreCaseAndBeerStyleIsLikeIgnoreCase("%" + beerName + "%", "%" + beerStyle + "%", pageable);
+    }
+
+    private Page<Beer> listBeersByStyle(String beerStyle, Pageable pageable) {
+        return beerRepository.findAllByBeerStyleIsLikeIgnoreCase("%" + beerStyle + "%", pageable);
     }
 
     private Page<Beer> listBeersByName(String beerName, Pageable pageable) {

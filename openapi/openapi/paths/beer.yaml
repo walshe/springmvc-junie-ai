@@ -27,6 +27,12 @@ get:
       schema:
         type: string
       description: Optional case-insensitive substring to filter by beer name.
+    - in: query
+      name: beerStyle
+      required: false
+      schema:
+        type: string
+      description: Optional case-insensitive substring to filter by beer style (e.g. LAGER, IPA, etc.).
   responses:
     '200':
       description: A page of beers.

@@ -126,4 +126,18 @@ class BeerControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
     }
+
+    @Test
+    void testListBeersWithStyleFilter() throws Exception {
+        beerRepository.save(Beer.builder().beerName("Style Beer").beerStyle("STOUT").upc("003").build());
+
+        mockMvc.perform(get("/api/v1/beer")
+                        .param("beerStyle", "stout")
+                        .param("page", "1")
+                        .param("size", "5")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.content[0].beerStyle", is("STOUT")));
+    }
 }

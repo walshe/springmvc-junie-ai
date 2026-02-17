@@ -11,6 +11,7 @@ import walshe.juniemvc.juniemvc.models.BeerDto;
 import walshe.juniemvc.juniemvc.services.BeerService;
 
 import java.net.URI;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,10 +22,11 @@ class BeerController {
     private final BeerService beerService;
 
     @GetMapping
-    Page<BeerDto> listBeers(@RequestParam(name = "beerName", required = false) String beerName,
+    Page<BeerDto> listBeers(@RequestParam(name = "beerName", required = false) Optional<String> beerName,
+                            @RequestParam(name = "beerStyle", required = false) Optional<String> beerStyle,
                             @RequestParam(name = "page") Integer page,
                             @RequestParam(name = "size") Integer size) {
-        return beerService.listBeers(beerName, page, size);
+        return beerService.listBeers(beerName, beerStyle, page, size);
     }
 
     @GetMapping("/{beerId}")

@@ -77,4 +77,20 @@ class BeerRepositoryTest {
         Page<Beer> page = beerRepository.findAllByBeerNameIsLikeIgnoreCase("%ale%", pageable);
         assertThat(page.getContent()).anyMatch(b -> b.getBeerName().toLowerCase().contains("ale"));
     }
+
+    @Test
+    void testFindAllByBeerStyle() {
+        beerRepository.save(Beer.builder().beerName("IPA One").beerStyle("IPA").upc("333").build());
+        Pageable pageable = PageRequest.of(0, 10);
+        Page<Beer> page = beerRepository.findAllByBeerStyleIsLikeIgnoreCase("%ipa%", pageable);
+        assertThat(page.getContent()).anyMatch(b -> b.getBeerStyle().equalsIgnoreCase("IPA"));
+    }
+
+    @Test
+    void testFindAllByBeerNameAndStyle() {
+        beerRepository.save(Beer.builder().beerName("Good Stout").beerStyle("STOUT").upc("444").build());
+        Pageable pageable = PageRequest.of(0, 10);
+        Page<Beer> page = beerRepository.findAllByBeerNameIsLikeIgnoreCaseAndBeerStyleIsLikeIgnoreCase("%good%", "%stout%", pageable);
+        assertThat(page.getContent()).allMatch(b -> b.getBeerName().toLowerCase().contains("good") && b.getBeerStyle().equalsIgnoreCase("STOUT"));
+    }
 }

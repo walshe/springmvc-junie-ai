@@ -19,7 +19,7 @@ class BeerServiceTest {
     @Test
     void testListBeers() {
         beerService.saveNewBeer(BeerDto.builder().beerName("Beer 1").build());
-        Page<BeerDto> beers = beerService.listBeers(null, 1, 10);
+        Page<BeerDto> beers = beerService.listBeers(java.util.Optional.empty(), java.util.Optional.empty(), 1, 10);
         assertThat(beers.getContent().size()).isGreaterThanOrEqualTo(0);
     }
 
@@ -59,7 +59,21 @@ class BeerServiceTest {
     @Test
     void testListBeersWithName() {
         beerService.saveNewBeer(BeerDto.builder().beerName("Zesty Ale").build());
-        Page<BeerDto> beers = beerService.listBeers("Ale", 1, 10);
+        Page<BeerDto> beers = beerService.listBeers(java.util.Optional.of("Ale"), java.util.Optional.empty(), 1, 10);
         assertThat(beers.getContent()).anyMatch(b -> b.getBeerName().toLowerCase().contains("ale"));
+    }
+
+    @Test
+    void testListBeersWithStyle() {
+        beerService.saveNewBeer(BeerDto.builder().beerName("Cool Lager").beerStyle("LAGER").build());
+        Page<BeerDto> beers = beerService.listBeers(java.util.Optional.empty(), java.util.Optional.of("lager"), 1, 10);
+        assertThat(beers.getContent()).anyMatch(b -> b.getBeerStyle().equalsIgnoreCase("LAGER"));
+    }
+
+    @Test
+    void testListBeersWithNameAndStyle() {
+        beerService.saveNewBeer(BeerDto.builder().beerName("Best Stout").beerStyle("STOUT").build());
+        Page<BeerDto> beers = beerService.listBeers(java.util.Optional.of("best"), java.util.Optional.of("stout"), 1, 10);
+        assertThat(beers.getContent()).anyMatch(b -> b.getBeerName().toLowerCase().contains("best") && b.getBeerStyle().equalsIgnoreCase("STOUT"));
     }
 }

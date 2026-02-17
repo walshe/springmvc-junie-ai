@@ -7,4 +7,6 @@ import walshe.juniemvc.juniemvc.entities.Beer;
 
 public interface BeerRepository extends JpaRepository<Beer, Integer> {
     Page<Beer> findAllByBeerNameIsLikeIgnoreCase(String beerName, Pageable pageable);
+    Page<Beer> findAllByBeerStyleIsLikeIgnoreCase(String beerStyle, Pageable pageable);
+    Page<Beer> findAllByBeerNameIsLikeIgnoreCaseAndBeerStyleIsLikeIgnoreCase(String beerName, String beerStyle, Pageable pageable);
 }
