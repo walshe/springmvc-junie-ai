@@ -74,6 +74,8 @@ body { background-color: hsl(var(--background)); color: hsl(var(--foreground)); 
 .text-muted-foreground { color: hsl(var(--muted-foreground)); }
 .border-input { border-color: hsl(var(--input)); }
 .border-border { border-color: hsl(var(--border)); }
+.bg-popover { background-color: hsl(var(--popover)); }
+.text-popover-foreground { color: hsl(var(--popover-foreground)); }
 .bg-accent { background-color: hsl(var(--accent)); }
 .text-accent-foreground { color: hsl(var(--accent-foreground)); }
 .ring-ring { --tw-ring-color: hsl(var(--ring)); }
