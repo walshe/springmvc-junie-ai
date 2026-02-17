@@ -1,19 +1,58 @@
 get:
   tags:
     - Beer
-  summary: List all beers
-  description: Returns a list of all beers in the system.
+  summary: List beers (paged)
+  description: Returns a paginated list of beers. Optionally filter by beerName (case-insensitive contains).
   operationId: listBeers
   security: []
+  parameters:
+    - in: query
+      name: page
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+      description: Page number starting from 1.
+    - in: query
+      name: size
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 1000
+      description: Page size (max 1000).
+    - in: query
+      name: beerName
+      required: false
+      schema:
+        type: string
+      description: Optional case-insensitive substring to filter by beer name.
   responses:
     '200':
-      description: A list of beers.
+      description: A page of beers.
       content:
         application/json:
           schema:
-            type: array
-            items:
-              $ref: '../components/schemas/Beer.yaml'
+            type: object
+            properties:
+              content:
+                type: array
+                items:
+                  $ref: '../components/schemas/Beer.yaml'
+              totalElements:
+                type: integer
+              totalPages:
+                type: integer
+              size:
+                type: integer
+              number:
+                type: integer
+              first:
+                type: boolean
+              last:
+                type: boolean
+              empty:
+                type: boolean
     '400':
       $ref: '../components/responses/Problem.yaml'
 post:

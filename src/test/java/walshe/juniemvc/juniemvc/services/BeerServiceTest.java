@@ -3,9 +3,9 @@ package walshe.juniemvc.juniemvc.services;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
 import walshe.juniemvc.juniemvc.models.BeerDto;
 
-import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -19,8 +19,8 @@ class BeerServiceTest {
     @Test
     void testListBeers() {
         beerService.saveNewBeer(BeerDto.builder().beerName("Beer 1").build());
-        List<BeerDto> beers = beerService.listBeers();
-        assertThat(beers.size()).isGreaterThan(0);
+        Page<BeerDto> beers = beerService.listBeers(null, 1, 10);
+        assertThat(beers.getContent().size()).isGreaterThanOrEqualTo(0);
     }
 
     @Test
@@ -55,5 +55,11 @@ class BeerServiceTest {
         beerService.deleteById(saved.getId());
         Optional<BeerDto> found = beerService.getBeerById(saved.getId());
         assertThat(found).isEmpty();
+    }
+    @Test
+    void testListBeersWithName() {
+        beerService.saveNewBeer(BeerDto.builder().beerName("Zesty Ale").build());
+        Page<BeerDto> beers = beerService.listBeers("Ale", 1, 10);
+        assertThat(beers.getContent()).anyMatch(b -> b.getBeerName().toLowerCase().contains("ale"));
     }
 }

@@ -1,16 +1,19 @@
 package walshe.juniemvc.juniemvc.services;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 import walshe.juniemvc.juniemvc.entities.Beer;
 import walshe.juniemvc.juniemvc.mappers.BeerMapper;
 import walshe.juniemvc.juniemvc.models.BeerDto;
 import walshe.juniemvc.juniemvc.repositories.BeerRepository;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -19,13 +22,52 @@ class BeerServiceImpl implements BeerService {
     private final BeerRepository beerRepository;
     private final BeerMapper beerMapper;
 
+    private static final int DEFAULT_PAGE = 0;
+    private static final int DEFAULT_PAGE_SIZE = 25;
+
     @Override
     @Transactional(readOnly = true)
-    public List<BeerDto> listBeers() {
-        return beerRepository.findAll()
-                .stream()
-                .map(beerMapper::beerToBeerDto)
-                .collect(Collectors.toList());
+    public Page<BeerDto> listBeers(String beerName, Integer pageNumber, Integer pageSize) {
+        Pageable pageable = buildPageRequest(pageNumber, pageSize);
+
+        Page<Beer> beerPage;
+
+        if (StringUtils.hasText(beerName)) {
+            beerPage = listBeersByName(beerName, pageable);
+        } else {
+            beerPage = beerRepository.findAll(pageable);
+        }
+
+        return beerPage.map(beerMapper::beerToBeerDto);
+    }
+
+    private Page<Beer> listBeersByName(String beerName, Pageable pageable) {
+        return beerRepository.findAllByBeerNameIsLikeIgnoreCase("%" + beerName + "%", pageable);
+    }
+
+    private Pageable buildPageRequest(Integer pageNumber, Integer pageSize) {
+        int queryPageNumber;
+        int queryPageSize;
+
+        if (pageNumber != null && pageNumber > 0) {
+            queryPageNumber = pageNumber - 1;
+        } else {
+            queryPageNumber = DEFAULT_PAGE;
+        }
+
+        if (pageSize == null) {
+            queryPageSize = DEFAULT_PAGE_SIZE;
+        } else {
+            if (pageSize > 1000) {
+                queryPageSize = 1000;
+            } else {
+                queryPageSize = pageSize;
+            }
+        }
+
+        Sort sort = Sort.by(Sort.Order.asc("beerName"));
+
+        return PageRequest.of(queryPageNumber, queryPageSize, sort);
     }
 
     @Override

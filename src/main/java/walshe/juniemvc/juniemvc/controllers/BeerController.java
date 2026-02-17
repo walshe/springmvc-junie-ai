@@ -2,8 +2,7 @@ package walshe.juniemvc.juniemvc.controllers;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +11,6 @@ import walshe.juniemvc.juniemvc.models.BeerDto;
 import walshe.juniemvc.juniemvc.services.BeerService;
 
 import java.net.URI;
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -23,8 +21,10 @@ class BeerController {
     private final BeerService beerService;
 
     @GetMapping
-    List<BeerDto> listBeers() {
-        return beerService.listBeers();
+    Page<BeerDto> listBeers(@RequestParam(name = "beerName", required = false) String beerName,
+                            @RequestParam(name = "page") Integer page,
+                            @RequestParam(name = "size") Integer size) {
+        return beerService.listBeers(beerName, page, size);
     }
 
     @GetMapping("/{beerId}")

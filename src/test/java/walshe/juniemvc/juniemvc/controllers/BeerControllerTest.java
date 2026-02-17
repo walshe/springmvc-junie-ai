@@ -41,6 +41,8 @@ class BeerControllerTest {
     @Test
     void testListBeers() throws Exception {
         mockMvc.perform(get("/api/v1/beer")
+                .param("page", "1")
+                .param("size", "10")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
@@ -110,5 +112,18 @@ class BeerControllerTest {
         mockMvc.perform(delete("/api/v1/beer/" + saved.getId())
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNoContent());
+    }
+    @Test
+    void testListBeersWithNameFilter() throws Exception {
+        beerRepository.save(Beer.builder().beerName("Lager One").beerStyle("LAGER").upc("001").build());
+        beerRepository.save(Beer.builder().beerName("Ale Two").beerStyle("ALE").upc("002").build());
+
+        mockMvc.perform(get("/api/v1/beer")
+                        .param("beerName", "Ale")
+                        .param("page", "1")
+                        .param("size", "5")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
     }
 }

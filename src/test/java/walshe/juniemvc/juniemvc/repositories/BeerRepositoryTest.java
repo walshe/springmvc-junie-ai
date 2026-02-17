@@ -3,6 +3,9 @@ package walshe.juniemvc.juniemvc.repositories;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import walshe.juniemvc.juniemvc.entities.Beer;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -65,5 +68,13 @@ class BeerRepositoryTest {
         beerRepository.deleteById(savedBeer.getId());
 
         assertThat(beerRepository.findById(savedBeer.getId())).isEmpty();
+    }
+    @Test
+    void testFindAllByBeerNameLikeIgnoreCase() {
+        beerRepository.save(Beer.builder().beerName("Crisp Lager").beerStyle("LAGER").upc("111").build());
+        beerRepository.save(Beer.builder().beerName("Amber Ale").beerStyle("ALE").upc("222").build());
+        Pageable pageable = PageRequest.of(0, 10);
+        Page<Beer> page = beerRepository.findAllByBeerNameIsLikeIgnoreCase("%ale%", pageable);
+        assertThat(page.getContent()).anyMatch(b -> b.getBeerName().toLowerCase().contains("ale"));
     }
 }
