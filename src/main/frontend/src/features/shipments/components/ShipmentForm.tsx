@@ -30,7 +30,7 @@ export function ShipmentForm({ initialData, onSubmit, isLoading }: ShipmentFormP
     e.preventDefault()
     onSubmit({
       ...initialData,
-      beerOrderId: parseInt(beerOrderId),
+      beerOrderId: beerOrderId ? parseInt(beerOrderId) : undefined,
       carrier,
       trackingNumber,
       shipmentDate: shipmentDate ? new Date(shipmentDate).toISOString() : undefined

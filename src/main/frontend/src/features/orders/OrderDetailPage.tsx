@@ -162,7 +162,7 @@ export default function OrderDetailPage() {
                 <div>
                   <p className="text-muted-foreground">Payment Amount</p>
                   <p className="font-medium text-lg">
-                    {order.paymentAmount !== undefined ? `$${order.paymentAmount.toFixed(2)}` : '-'}
+                    {order.paymentAmount != null ? `$${order.paymentAmount.toFixed(2)}` : '-'}
                   </p>
                 </div>
               </div>

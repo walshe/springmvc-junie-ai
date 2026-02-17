@@ -194,7 +194,6 @@ function CustomersPage() {
         onSubmit={handleCreate}
       >
         <CustomerForm
-          initialValues={formData}
           onSubmit={handleCreate}
           onChange={setFormData}
         />

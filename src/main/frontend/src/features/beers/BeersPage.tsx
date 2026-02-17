@@ -125,7 +125,9 @@ function BeersPage() {
       {
         header: 'Price',
         accessorKey: (b: Beer) => (
-          <span className="tabular-nums">${b.price.toFixed(2)}</span>
+          <span className="tabular-nums">
+            {b.price != null ? `$${b.price.toFixed(2)}` : '-'}
+          </span>
         ),
         className: 'text-right',
       },

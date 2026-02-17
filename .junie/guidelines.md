@@ -207,3 +207,78 @@ logger.atDebug()
   npm test
   ```
 * This will execute `redocly lint` to ensure the specification adheres to the configured rules.
+
+## 17. Frontend Project Structure and Integration
+* Location: The React frontend is located in `src/main/frontend`.
+* Integration: It is integrated into the Maven lifecycle using `frontend-maven-plugin` so production assets are built during `generate-resources`.
+* Static Assets: The production build output is emitted to `src/main/resources/static`, allowing the Spring Boot JAR to serve the frontend automatically.
+
+**Folder Structure (src/main/frontend/src):**
+* `api/`: Generated TypeScript types and API client modules.
+* `app/`: App-wide composition (routing, layout shells, providers).
+* `features/`: Domain-specific code grouped by feature (beers, customers, orders, shipments) with components, hooks, and feature APIs.
+* `components/`: Shared UI components (shadcn primitives and project-specific wrappers like `DataTable`, `FormField`, `Modal`).
+* `hooks/`: Reusable React hooks.
+* `lib/`: Infrastructure and utilities (e.g., Axios instance, config helpers).
+* `test-utils/` and `setupTests.ts`: Test helpers and global test setup.
+
+## 18. Building and Running the Frontend
+The project supports two primary workflows: full integration with Maven, and standalone frontend development with Vite.
+
+**Full Application (Maven):**
+* Build & Package (cleans, installs Node/npm, builds frontend, compiles backend):
+  ```bash
+  ./mvnw clean package
+  ```
+* Run the application (will build resources if needed):
+  ```bash
+  ./mvnw spring-boot:run
+  ```
+* App URL: `http://localhost:8080`
+
+**Standalone Frontend Development:**
+* Install dependencies (first run or after lock changes):
+  ```bash
+  cd src/main/frontend
+  npm ci
+  ```
+* Start Vite dev server with API proxy to the backend on :8080:
+  ```bash
+  npm run dev
+  ```
+* Dev URL: `http://localhost:5173`
+
+**API Client Generation (OpenAPI → TypeScript):**
+* Regenerate client types and services when the OpenAPI spec changes:
+  ```bash
+  cd src/main/frontend
+  npm run gen:api
+  ```
+* Source of truth: `openapi/openapi/openapi.yaml`.
+
+## 19. Testing the Frontend
+* Framework: **Vitest** with **jsdom** environment and **React Testing Library** for component tests.
+* Mocking: **MSW (Mock Service Worker)** intercepts network requests in tests to avoid coupling to a running backend.
+* Commands:
+  ```bash
+  cd src/main/frontend
+  npm test        # run all tests once
+  npm run lint    # run ESLint
+  npm run format  # run Prettier (write)
+  ```
+
+## 20. Frontend Best Practices
+* API-First Types and Clients:
+  * Do not handcraft DTOs in the frontend. Use `npm run gen:api` to stay in sync with the OpenAPI spec.
+* Feature-Based Organization:
+  * Group by feature (`features/beers`, `features/customers`, etc.) rather than by file type to improve cohesion and scalability.
+* Centralized API Client and Error Handling:
+  * Use the shared Axios instance in `src/lib/api.ts` with a global response interceptor to normalize server errors (e.g., Problem Details) and show consistent toasts.
+* Controlled, Accessible Forms:
+  * Use controlled inputs and a consistent `<form>` pattern that accepts `onChange` and `onSubmit`, enabling reuse in dialogs and pages; validate with server messages when available.
+* UI Consistency with shadcn + Tailwind:
+  * Prefer shadcn primitives for accessibility and consistent theming; compose with Tailwind utility classes. Keep dialog headers left-aligned and avoid duplicate internal spacing.
+* Environment Safety:
+  * Access env via `import.meta.env` and centralize defaults in `src/lib/config.ts`.
+* Testing Discipline:
+  * Write unit tests for shared components/utilities and integration tests for user flows with MSW. Keep tests deterministic.

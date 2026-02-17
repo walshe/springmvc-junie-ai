@@ -7,7 +7,7 @@ import walshe.juniemvc.juniemvc.models.BeerDto;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-02-17T17:13:33+0000",
+    date = "2026-02-17T18:58:30+0000",
     comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.2 (Amazon.com Inc.)"
 )
 @Component

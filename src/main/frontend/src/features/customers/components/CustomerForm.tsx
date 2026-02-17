@@ -1,14 +1,13 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
 import { FormField } from '@/components/FormField'
 import type { CreateCustomerCommand } from '@/api/models/CreateCustomerCommand'
 import type { UpdateCustomerCommand } from '@/api/models/UpdateCustomerCommand'
 
 export type CustomerFormValues = CreateCustomerCommand | UpdateCustomerCommand
 
-  interface CustomerFormProps {
+interface CustomerFormProps {
   initialValues?: Partial<CustomerFormValues>
   onSubmit: (e?: React.FormEvent) => void
   onChange: (values: CustomerFormValues) => void
@@ -27,9 +26,6 @@ export function CustomerForm({ initialValues, onSubmit, onChange }: CustomerForm
     ...initialValues,
   })
 
-  useEffect(() => {
-    setValues((v) => ({ ...v, ...initialValues }))
-  }, [initialValues])
 
   useEffect(() => {
     onChange(values)

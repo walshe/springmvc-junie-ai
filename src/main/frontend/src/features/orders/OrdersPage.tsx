@@ -85,7 +85,7 @@ export default function OrdersPage() {
     {
       header: 'Payment Amount',
       accessorKey: (order: BeerOrder) =>
-        order.paymentAmount !== undefined
+        order.paymentAmount != null
           ? `$${order.paymentAmount.toFixed(2)}`
           : '-',
       className: 'text-right',
