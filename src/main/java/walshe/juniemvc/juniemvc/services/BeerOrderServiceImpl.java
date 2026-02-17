@@ -9,6 +9,7 @@ import walshe.juniemvc.juniemvc.entities.BeerOrderLine;
 import walshe.juniemvc.juniemvc.mappers.BeerOrderMapper;
 import walshe.juniemvc.juniemvc.models.BeerOrderDto;
 import walshe.juniemvc.juniemvc.models.CreateBeerOrderCommand;
+import walshe.juniemvc.juniemvc.models.PatchBeerOrderCommand;
 import walshe.juniemvc.juniemvc.repositories.BeerOrderRepository;
 import walshe.juniemvc.juniemvc.repositories.BeerRepository;
 
@@ -72,6 +73,15 @@ class BeerOrderServiceImpl implements BeerOrderService {
             found.setPaymentAmount(dto.getPaymentAmount());
             found.setStatus(dto.getStatus());
             found.setNotes(dto.getNotes());
+            beerOrderRepository.save(found);
+        });
+    }
+
+    @Override
+    @Transactional
+    public void patchBeerOrder(Integer id, PatchBeerOrderCommand command) {
+        beerOrderRepository.findById(id).ifPresent(found -> {
+            beerOrderMapper.updateBeerOrderFromPatch(command, found);
             beerOrderRepository.save(found);
         });
     }

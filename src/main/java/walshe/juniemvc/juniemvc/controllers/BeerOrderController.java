@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import walshe.juniemvc.juniemvc.models.BeerOrderDto;
 import walshe.juniemvc.juniemvc.models.CreateBeerOrderCommand;
+import walshe.juniemvc.juniemvc.models.PatchBeerOrderCommand;
 import walshe.juniemvc.juniemvc.services.BeerOrderService;
 
 import java.net.URI;
@@ -38,5 +39,11 @@ class BeerOrderController {
                 .buildAndExpand(created.getId())
                 .toUri();
         return ResponseEntity.created(location).body(created);
+    }
+
+    @PatchMapping("/{orderId}")
+    ResponseEntity<Void> patchOrder(@PathVariable("orderId") Integer orderId, @RequestBody PatchBeerOrderCommand command) {
+        beerOrderService.patchBeerOrder(orderId, command);
+        return ResponseEntity.noContent().build();
     }
 }

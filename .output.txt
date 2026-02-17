@@ -1,308 +1,408 @@
-[INFO] Scanning for projects...
-[INFO]
-[INFO] ----------------------< walshe.juniemvc:juniemvc >----------------------
-[INFO] Building juniemvc 0.0.1-SNAPSHOT
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO]
-[INFO] --- resources:3.3.1:resources (default-resources) @ juniemvc ---
-[INFO] Copying 1 resource from src/main/resources to target/classes
-[INFO] Copying 3 resources from src/main/resources to target/classes
-[INFO]
-[INFO] --- compiler:3.14.1:compile (default-compile) @ juniemvc ---
-[INFO] Nothing to compile - all classes are up to date.
-[INFO]
-[INFO] --- resources:3.3.1:testResources (default-testResources) @ juniemvc ---
-[INFO] Copying 1 resource from src/test/resources to target/test-classes
-[INFO]
-[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ juniemvc ---
-[INFO] Nothing to compile - all classes are up to date.
-[INFO]
-[INFO] --- surefire:3.5.4:test (default-test) @ juniemvc ---
-[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
-[INFO]
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running walshe.juniemvc.juniemvc.JuniemvcApplicationTests
-11:52:49.312 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.JuniemvcApplicationTests]: JuniemvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:52:49.445 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.JuniemvcApplicationTests
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v4.0.2)
-2026-02-13T11:52:49.972Z  INFO 41617 --- [           main] w.j.juniemvc.JuniemvcApplicationTests    : Starting JuniemvcApplicationTests using Java 21.0.2 with PID 41617 (started by Emmett in /Users/Emmett/dev/juniemvc/juniemvc)
-2026-02-13T11:52:49.974Z  INFO 41617 --- [           main] w.j.juniemvc.JuniemvcApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2026-02-13T11:52:50.821Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-13T11:52:50.904Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 5 JPA repository interfaces.
-2026-02-13T11:52:51.648Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-02-13T11:52:51.850Z  INFO 41617 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-13T11:52:51.852Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-02-13T11:52:51.911Z  INFO 41617 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.4)
-2026-02-13T11:52:51.919Z  WARN 41617 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
-2026-02-13T11:52:51.949Z  INFO 41617 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
-2026-02-13T11:52:51.952Z  INFO 41617 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.016s)
-2026-02-13T11:52:51.963Z  INFO 41617 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
-2026-02-13T11:52:52.010Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
-2026-02-13T11:52:52.025Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - init database"
-2026-02-13T11:52:52.057Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add customer"
-2026-02-13T11:52:52.075Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - add beer order shipment"
-2026-02-13T11:52:52.096Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.042s)
-2026-02-13T11:52:52.193Z  INFO 41617 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-13T11:52:52.261Z  INFO 41617 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-13T11:52:52.854Z  INFO 41617 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-13T11:52:52.949Z  INFO 41617 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-        Database JDBC URL [jdbc:h2:mem:testdb]
-        Database driver: H2 JDBC Driver
-        Database dialect: H2Dialect
-        Database version: 2.4.240
-        Default catalog/schema: TESTDB/PUBLIC
-        Autocommit mode: undefined/unknown
-        Isolation level: READ_COMMITTED [default READ_COMMITTED]
-        JDBC fetch size: 100
-        Pool: DataSourceConnectionProvider
-        Minimum pool size: undefined/unknown
-        Maximum pool size: undefined/unknown
-2026-02-13T11:52:54.185Z  INFO 41617 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-13T11:52:54.215Z  INFO 41617 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-13T11:52:54.306Z  INFO 41617 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-13T11:52:54.794Z  WARN 41617 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-13T11:52:55.301Z  INFO 41617 --- [           main] w.j.juniemvc.JuniemvcApplicationTests    : Started JuniemvcApplicationTests in 5.641 seconds (process running for 7.198)
-Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
-OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
-WARNING: A Java agent has been loaded dynamically (/Users/Emmett/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.695 s -- in walshe.juniemvc.juniemvc.JuniemvcApplicationTests
-[INFO] Running walshe.juniemvc.juniemvc.repositories.BeerOrderShipmentRepositoryTest
-2026-02-13T11:52:55.800Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.repositories.BeerOrderShipmentRepositoryTest]: BeerOrderShipmentRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-13T11:52:55.816Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.repositories.BeerOrderShipmentRepositoryTest
-Hibernate: insert into beer_order (created_date,customer_id,customer_ref,payment_amount,status,update_date,version,id) values (?,?,?,?,?,?,?,default)
-Hibernate: insert into beer_order_shipment (beer_order_id,carrier,created_date,shipment_date,tracking_number,update_date,version,id) values (?,?,?,?,?,?,?,default)
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.213 s -- in walshe.juniemvc.juniemvc.repositories.BeerOrderShipmentRepositoryTest
-[INFO] Running walshe.juniemvc.juniemvc.repositories.BeerRepositoryTest
-2026-02-13T11:52:56.017Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.repositories.BeerRepositoryTest]: BeerRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-13T11:52:56.020Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.repositories.BeerRepositoryTest
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: update beer set beer_name=?,beer_style=?,price=?,quantity_on_hand=?,upc=?,update_date=?,version=? where id=? and version=?
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: delete from beer where id=? and version=?
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.159 s -- in walshe.juniemvc.juniemvc.repositories.BeerRepositoryTest
-[INFO] Running walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest
-2026-02-13T11:52:56.178Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest]: CustomerRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-13T11:52:56.180Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v4.0.2)
-2026-02-13T11:52:56.217Z  INFO 41617 --- [           main] w.j.j.r.CustomerRepositoryTest           : Starting CustomerRepositoryTest using Java 21.0.2 with PID 41617 (started by Emmett in /Users/Emmett/dev/juniemvc/juniemvc)
-2026-02-13T11:52:56.218Z  INFO 41617 --- [           main] w.j.j.r.CustomerRepositoryTest           : The following 1 profile is active: "test"
-2026-02-13T11:52:56.379Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-13T11:52:56.399Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
-2026-02-13T11:52:56.500Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-02-13T11:52:56.501Z  INFO 41617 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2026-02-13T11:52:56.502Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-02-13T11:52:56.503Z  INFO 41617 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.4)
-2026-02-13T11:52:56.506Z  WARN 41617 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
-2026-02-13T11:52:56.512Z  INFO 41617 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.003s)
-2026-02-13T11:52:56.516Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 3
-2026-02-13T11:52:56.516Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
-2026-02-13T11:52:56.537Z  INFO 41617 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-13T11:52:56.557Z  INFO 41617 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-13T11:52:56.559Z  INFO 41617 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-        Database JDBC URL [jdbc:h2:mem:testdb]
-        Database driver: H2 JDBC Driver
-        Database dialect: H2Dialect
-        Database version: 2.4.240
-        Default catalog/schema: TESTDB/PUBLIC
-        Autocommit mode: undefined/unknown
-        Isolation level: READ_COMMITTED [default READ_COMMITTED]
-        JDBC fetch size: 100
-        Pool: DataSourceConnectionProvider
-        Minimum pool size: undefined/unknown
-        Maximum pool size: undefined/unknown
-2026-02-13T11:52:56.650Z  INFO 41617 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-13T11:52:56.652Z  INFO 41617 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-13T11:52:56.770Z  WARN 41617 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-13T11:52:56.894Z  INFO 41617 --- [           main] w.j.j.r.CustomerRepositoryTest           : Started CustomerRepositoryTest in 0.707 seconds (process running for 8.79)
-Hibernate: insert into customer (address_line_1,address_line_2,city,created_date,email,name,phone_number,postal_code,state,update_date,version,id) values (?,?,?,?,?,?,?,?,?,?,?,default)
-Hibernate: select c1_0.id,c1_0.address_line_1,c1_0.address_line_2,c1_0.city,c1_0.created_date,c1_0.email,c1_0.name,c1_0.phone_number,c1_0.postal_code,c1_0.state,c1_0.update_date,c1_0.version from customer c1_0 where c1_0.id=?
-Hibernate: insert into customer (address_line_1,address_line_2,city,created_date,email,name,phone_number,postal_code,state,update_date,version,id) values (?,?,?,?,?,?,?,?,?,?,?,default)
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.774 s -- in walshe.juniemvc.juniemvc.repositories.CustomerRepositoryTest
-[INFO] Running walshe.juniemvc.juniemvc.mappers.BeerOrderShipmentMapperTest
-2026-02-13T11:52:56.952Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.mappers.BeerOrderShipmentMapperTest]: BeerOrderShipmentMapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-13T11:52:56.962Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.mappers.BeerOrderShipmentMapperTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s -- in walshe.juniemvc.juniemvc.mappers.BeerOrderShipmentMapperTest
-[INFO] Running walshe.juniemvc.juniemvc.mappers.CustomerMapperTest
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in walshe.juniemvc.juniemvc.mappers.CustomerMapperTest
-[INFO] Running walshe.juniemvc.juniemvc.controllers.BeerOrderControllerTest
-2026-02-13T11:52:57.008Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.controllers.BeerOrderControllerTest]: BeerOrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-13T11:52:57.017Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.controllers.BeerOrderControllerTest
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v4.0.2)
-2026-02-13T11:52:57.048Z  INFO 41617 --- [           main] w.j.j.c.BeerOrderControllerTest          : Starting BeerOrderControllerTest using Java 21.0.2 with PID 41617 (started by Emmett in /Users/Emmett/dev/juniemvc/juniemvc)
-2026-02-13T11:52:57.049Z  INFO 41617 --- [           main] w.j.j.c.BeerOrderControllerTest          : No active profile set, falling back to 1 default profile: "default"
-2026-02-13T11:52:57.173Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-13T11:52:57.185Z  INFO 41617 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 5 JPA repository interfaces.
-2026-02-13T11:52:57.381Z  INFO 41617 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
-2026-02-13T11:52:57.398Z  INFO 41617 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-13T11:52:57.398Z  INFO 41617 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-13T11:52:57.445Z  INFO 41617 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 395 ms
-2026-02-13T11:52:57.539Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2026-02-13T11:52:57.540Z  INFO 41617 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
-2026-02-13T11:52:57.540Z  INFO 41617 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2026-02-13T11:52:57.541Z  INFO 41617 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.4)
-2026-02-13T11:52:57.543Z  WARN 41617 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
-2026-02-13T11:52:57.548Z  INFO 41617 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.003s)
-2026-02-13T11:52:57.551Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 3
-2026-02-13T11:52:57.552Z  INFO 41617 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
-2026-02-13T11:52:57.568Z  INFO 41617 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-13T11:52:57.588Z  INFO 41617 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-13T11:52:57.589Z  INFO 41617 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-        Database JDBC URL [jdbc:h2:mem:testdb]
-        Database driver: H2 JDBC Driver
-        Database dialect: H2Dialect
-        Database version: 2.4.240
-        Default catalog/schema: TESTDB/PUBLIC
-        Autocommit mode: undefined/unknown
-        Isolation level: READ_COMMITTED [default READ_COMMITTED]
-        JDBC fetch size: 100
-        Pool: DataSourceConnectionProvider
-        Minimum pool size: undefined/unknown
-        Maximum pool size: undefined/unknown
-2026-02-13T11:52:57.671Z  INFO 41617 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-13T11:52:57.675Z  INFO 41617 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-13T11:52:57.786Z  WARN 41617 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-13T11:52:57.915Z  INFO 41617 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 49276 (http) with context path '/'
-2026-02-13T11:52:57.917Z  INFO 41617 --- [           main] w.j.j.c.BeerOrderControllerTest          : Started BeerOrderControllerTest in 0.895 seconds (process running for 9.814)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0
-Hibernate: delete from beer where id=? and version=?
-Hibernate: delete from beer where id=? and version=?
-Hibernate: delete from beer where id=? and version=?
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-2026-02-13T11:52:58.599Z  INFO 41617 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-13T11:52:58.599Z  INFO 41617 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-13T11:52:58.601Z  INFO 41617 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: insert into beer_order (created_date,customer_id,customer_ref,payment_amount,status,update_date,version,id) values (?,?,?,?,?,?,?,default)
-Hibernate: insert into beer_order_line (beer_id,beer_order_id,created_date,order_quantity,quantity_allocated,status,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select bo1_0.id,bol1_0.beer_order_id,bol1_0.id,bol1_0.beer_id,b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version,bol1_0.created_date,bol1_0.order_quantity,bol1_0.quantity_allocated,bol1_0.status,bol1_0.update_date,bol1_0.version,bo1_0.created_date,bo1_0.customer_id,bo1_0.customer_ref,bo1_0.payment_amount,bo1_0.status,bo1_0.update_date,bo1_0.version from beer_order bo1_0 left join beer_order_line bol1_0 on bo1_0.id=bol1_0.beer_order_id left join beer b1_0 on b1_0.id=bol1_0.beer_id where bo1_0.id=?
-Hibernate: select bo1_0.id,bo1_0.created_date,bo1_0.customer_id,bo1_0.customer_ref,bo1_0.payment_amount,bo1_0.status,bo1_0.update_date,bo1_0.version from beer_order bo1_0
-Hibernate: select bol1_0.beer_order_id,bol1_0.id,bol1_0.beer_id,bol1_0.created_date,bol1_0.order_quantity,bol1_0.quantity_allocated,bol1_0.status,bol1_0.update_date,bol1_0.version from beer_order_line bol1_0 where bol1_0.beer_order_id=?
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.270 s -- in walshe.juniemvc.juniemvc.controllers.BeerOrderControllerTest
-[INFO] Running walshe.juniemvc.juniemvc.controllers.CustomerControllerTest
-2026-02-13T11:52:59.532Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.533Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:52:59.533Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:52:59.698Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.698Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:52:59.698Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:52:59.725Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.726Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:52:59.726Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:52:59.747Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.747Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:52:59.748Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:52:59.780Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.780Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:52:59.780Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:52:59.810Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.810Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:52:59.810Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.535 s -- in walshe.juniemvc.juniemvc.controllers.CustomerControllerTest
-[INFO] Running walshe.juniemvc.juniemvc.controllers.BeerControllerTest
-2026-02-13T11:52:59.823Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.controllers.BeerControllerTest]: BeerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-13T11:52:59.826Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.controllers.BeerControllerTest
-2026-02-13T11:52:59.842Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.842Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:52:59.844Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-2026-02-13T11:52:59.890Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.891Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:52:59.894Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: update beer set beer_name=?,beer_style=?,price=?,quantity_on_hand=?,upc=?,update_date=?,version=? where id=? and version=?
-2026-02-13T11:52:59.975Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.975Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:52:59.977Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0
-2026-02-13T11:52:59.998Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:52:59.999Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:53:00.003Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-2026-02-13T11:53:00.030Z  INFO 41617 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:53:00.031Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:53:00.033Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: delete from beer where id=? and version=?
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.228 s -- in walshe.juniemvc.juniemvc.controllers.BeerControllerTest
-[INFO] Running walshe.juniemvc.juniemvc.controllers.BeerOrderShipmentControllerTest
-2026-02-13T11:53:00.128Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:53:00.128Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:53:00.128Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:53:00.160Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:53:00.161Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:53:00.161Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:53:00.185Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:53:00.185Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:53:00.185Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:53:00.210Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:53:00.211Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:53:00.211Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:53:00.236Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:53:00.236Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:53:00.236Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-13T11:53:00.265Z  INFO 41617 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2026-02-13T11:53:00.266Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-13T11:53:00.266Z  INFO 41617 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.222 s -- in walshe.juniemvc.juniemvc.controllers.BeerOrderShipmentControllerTest
-[INFO] Running walshe.juniemvc.juniemvc.services.BeerServiceTest
-2026-02-13T11:53:00.275Z  INFO 41617 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [walshe.juniemvc.juniemvc.services.BeerServiceTest]: BeerServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-13T11:53:00.298Z  INFO 41617 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration walshe.juniemvc.juniemvc.JuniemvcApplication for test class walshe.juniemvc.juniemvc.services.BeerServiceTest
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: delete from beer where id=? and version=?
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: update beer set beer_name=?,beer_style=?,price=?,quantity_on_hand=?,upc=?,update_date=?,version=? where id=? and version=?
-Hibernate: select b1_0.id,b1_0.beer_name,b1_0.beer_style,b1_0.created_date,b1_0.price,b1_0.quantity_on_hand,b1_0.upc,b1_0.update_date,b1_0.version from beer b1_0 where b1_0.id=?
-Hibernate: insert into beer (beer_name,beer_style,created_date,price,quantity_on_hand,upc,update_date,version,id) values (?,?,?,?,?,?,?,?,default)
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 s -- in walshe.juniemvc.juniemvc.services.BeerServiceTest
-[INFO]
-[INFO] Results:
-[INFO]
-[INFO] Tests run: 38, Failures: 0, Errors: 0, Skipped: 0
-[INFO]
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.573 s
-[INFO] Finished at: 2026-02-13T11:53:00Z
-[INFO] ------------------------------------------------------------------------
+./.junie/guidelines.md
+./HELP.md
+./openapi/node_modules/queue-microtask/README.md
+./openapi/node_modules/is-docker/readme.md
+./openapi/node_modules/jest-matcher-utils/README.md
+./openapi/node_modules/is-inside-container/readme.md
+./openapi/node_modules/fast-safe-stringify/CHANGELOG.md
+./openapi/node_modules/fast-safe-stringify/readme.md
+./openapi/node_modules/should-equal/README.md
+./openapi/node_modules/react-tabs/README.md
+./openapi/node_modules/better-ajv-errors/CHANGELOG.md
+./openapi/node_modules/better-ajv-errors/README.md
+./openapi/node_modules/@types/stylis/README.md
+./openapi/node_modules/@types/trusted-types/README.md
+./openapi/node_modules/@types/node/README.md
+./openapi/node_modules/@types/json-schema/README.md
+./openapi/node_modules/oas-linter/README.md
+./openapi/node_modules/diff-sequences/README.md
+./openapi/node_modules/jsep/README.md
+./openapi/node_modules/foreach/Readme.md
+./openapi/node_modules/reftools/README.md
+./openapi/node_modules/path-is-absolute/readme.md
+./openapi/node_modules/prismjs/CHANGELOG.md
+./openapi/node_modules/prismjs/README.md
+./openapi/node_modules/is-wsl/readme.md
+./openapi/node_modules/should-util/README.md
+./openapi/node_modules/csstype/README.md
+./openapi/node_modules/stylis/README.md
+./openapi/node_modules/strip-ansi/readme.md
+./openapi/node_modules/react-is/README.md
+./openapi/node_modules/@redocly/config/README.md
+./openapi/node_modules/@redocly/openapi-core/CHANGELOG.md
+./openapi/node_modules/@redocly/openapi-core/README.md
+./openapi/node_modules/@redocly/openapi-core/src/__tests__/fixtures/resolve/description.md
+./openapi/node_modules/@redocly/openapi-core/src/rules/oas2/__tests__/spec/fixtures/description.md
+./openapi/node_modules/@redocly/openapi-core/src/rules/oas3/__tests__/spec/fixtures/description.md
+./openapi/node_modules/@redocly/respect-core/node_modules/colorette/LICENSE.md
+./openapi/node_modules/@redocly/respect-core/node_modules/colorette/README.md
+./openapi/node_modules/@redocly/respect-core/README.md
+./openapi/node_modules/@redocly/cli/CHANGELOG.md
+./openapi/node_modules/@redocly/cli/README.md
+./openapi/node_modules/@redocly/ajv/README.md
+./openapi/node_modules/get-port-please/README.md
+./openapi/node_modules/call-me-maybe/README.md
+./openapi/node_modules/swagger2openapi/README.md
+./openapi/node_modules/loose-envify/README.md
+./openapi/node_modules/outdent/CHANGELOG.md
+./openapi/node_modules/outdent/README.md
+./openapi/node_modules/es-errors/CHANGELOG.md
+./openapi/node_modules/es-errors/README.md
+./openapi/node_modules/js-levenshtein/README.md
+./openapi/node_modules/agent-base/README.md
+./openapi/node_modules/bundle-name/readme.md
+./openapi/node_modules/ms/license.md
+./openapi/node_modules/ms/readme.md
+./openapi/node_modules/styled-components/README.md
+./openapi/node_modules/math-intrinsics/CHANGELOG.md
+./openapi/node_modules/math-intrinsics/README.md
+./openapi/node_modules/@jest/schemas/README.md
+./openapi/node_modules/dotenv/CHANGELOG.md
+./openapi/node_modules/dotenv/README.md
+./openapi/node_modules/dotenv/README-es.md
+./openapi/node_modules/has-tostringtag/CHANGELOG.md
+./openapi/node_modules/has-tostringtag/README.md
+./openapi/node_modules/abort-controller/README.md
+./openapi/node_modules/use-sync-external-store/README.md
+./openapi/node_modules/escalade/readme.md
+./openapi/node_modules/node-fetch/LICENSE.md
+./openapi/node_modules/node-fetch/README.md
+./openapi/node_modules/uri-js-replace/README.md
+./openapi/node_modules/camelize/CHANGELOG.md
+./openapi/node_modules/camelize/README.md
+./openapi/node_modules/oas-kit-common/README.md
+./openapi/node_modules/balanced-match/LICENSE.md
+./openapi/node_modules/balanced-match/README.md
+./openapi/node_modules/css-to-react-native/LICENSE.md
+./openapi/node_modules/css-to-react-native/README.md
+./openapi/node_modules/call-bind-apply-helpers/CHANGELOG.md
+./openapi/node_modules/call-bind-apply-helpers/README.md
+./openapi/node_modules/define-lazy-prop/readme.md
+./openapi/node_modules/@opentelemetry/sdk-logs/README.md
+./openapi/node_modules/@opentelemetry/core/README.md
+./openapi/node_modules/@opentelemetry/api-logs/README.md
+./openapi/node_modules/@opentelemetry/semantic-conventions/README.md
+./openapi/node_modules/@opentelemetry/exporter-trace-otlp-http/README.md
+./openapi/node_modules/@opentelemetry/resources/README.md
+./openapi/node_modules/@opentelemetry/propagator-b3/README.md
+./openapi/node_modules/@opentelemetry/otlp-transformer/README.md
+./openapi/node_modules/@opentelemetry/otlp-exporter-base/README.md
+./openapi/node_modules/@opentelemetry/sdk-trace-base/README.md
+./openapi/node_modules/@opentelemetry/propagator-jaeger/README.md
+./openapi/node_modules/@opentelemetry/sdk-trace-node/README.md
+./openapi/node_modules/@opentelemetry/api/README.md
+./openapi/node_modules/@opentelemetry/context-async-hooks/README.md
+./openapi/node_modules/@opentelemetry/sdk-metrics/README.md
+./openapi/node_modules/strnum/CHANGELOG.md
+./openapi/node_modules/strnum/README.md
+./openapi/node_modules/redoc/CHANGELOG.md
+./openapi/node_modules/redoc/README.md
+./openapi/node_modules/nanoid/README.md
+./openapi/node_modules/css-color-keywords/README.md
+./openapi/node_modules/lunr/CHANGELOG.md
+./openapi/node_modules/lunr/README.md
+./openapi/node_modules/lunr/CONTRIBUTING.md
+./openapi/node_modules/wrap-ansi/readme.md
+./openapi/node_modules/y18n/CHANGELOG.md
+./openapi/node_modules/y18n/README.md
+./openapi/node_modules/once/README.md
+./openapi/node_modules/string_decoder/README.md
+./openapi/node_modules/tslib/README.md
+./openapi/node_modules/tslib/SECURITY.md
+./openapi/node_modules/argparse/CHANGELOG.md
+./openapi/node_modules/argparse/README.md
+./openapi/node_modules/picomatch/CHANGELOG.md
+./openapi/node_modules/picomatch/README.md
+./openapi/node_modules/safe-buffer/README.md
+./openapi/node_modules/http2-client/README.md
+./openapi/node_modules/fast-xml-parser/CHANGELOG.md
+./openapi/node_modules/fast-xml-parser/README.md
+./openapi/node_modules/node-fetch-h2/LICENSE.md
+./openapi/node_modules/node-fetch-h2/CHANGELOG.md
+./openapi/node_modules/node-fetch-h2/README.md
+./openapi/node_modules/function-bind/CHANGELOG.md
+./openapi/node_modules/function-bind/README.md
+./openapi/node_modules/function-bind/.github/SECURITY.md
+./openapi/node_modules/is-glob/README.md
+./openapi/node_modules/marked/LICENSE.md
+./openapi/node_modules/marked/README.md
+./openapi/node_modules/leven/readme.md
+./openapi/node_modules/is-fullwidth-code-point/readme.md
+./openapi/node_modules/yargs-parser/CHANGELOG.md
+./openapi/node_modules/yargs-parser/README.md
+./openapi/node_modules/inherits/README.md
+./openapi/node_modules/jsonpath-plus/README.md
+./openapi/node_modules/jsonpath-plus/CHANGES.md
+./openapi/node_modules/jsonpath-plus/SECURITY.md
+./openapi/node_modules/anymatch/README.md
+./openapi/node_modules/color-name/README.md
+./openapi/node_modules/es-define-property/CHANGELOG.md
+./openapi/node_modules/es-define-property/README.md
+./openapi/node_modules/classnames/HISTORY.md
+./openapi/node_modules/classnames/README.md
+./openapi/node_modules/chokidar/README.md
+./openapi/node_modules/postcss/README.md
+./openapi/node_modules/undici/types/README.md
+./openapi/node_modules/undici/docs/docs/api/Agent.md
+./openapi/node_modules/undici/docs/docs/api/EnvHttpProxyAgent.md
+./openapi/node_modules/undici/docs/docs/api/Debug.md
+./openapi/node_modules/undici/docs/docs/api/ProxyAgent.md
+./openapi/node_modules/undici/docs/docs/api/Connector.md
+./openapi/node_modules/undici/docs/docs/api/BalancedPool.md
+./openapi/node_modules/undici/docs/docs/api/DiagnosticsChannel.md
+./openapi/node_modules/undici/docs/docs/api/RedirectHandler.md
+./openapi/node_modules/undici/docs/docs/api/DispatchInterceptor.md
+./openapi/node_modules/undici/docs/docs/api/WebSocket.md
+./openapi/node_modules/undici/docs/docs/api/MockAgent.md
+./openapi/node_modules/undici/docs/docs/api/Errors.md
+./openapi/node_modules/undici/docs/docs/api/PoolStats.md
+./openapi/node_modules/undici/docs/docs/api/Pool.md
+./openapi/node_modules/undici/docs/docs/api/CacheStorage.md
+./openapi/node_modules/undici/docs/docs/api/MockErrors.md
+./openapi/node_modules/undici/docs/docs/api/MockPool.md
+./openapi/node_modules/undici/docs/docs/api/RetryAgent.md
+./openapi/node_modules/undici/docs/docs/api/EventSource.md
+./openapi/node_modules/undici/docs/docs/api/Cookies.md
+./openapi/node_modules/undici/docs/docs/api/Dispatcher.md
+./openapi/node_modules/undici/docs/docs/api/RetryHandler.md
+./openapi/node_modules/undici/docs/docs/api/Fetch.md
+./openapi/node_modules/undici/docs/docs/api/MockClient.md
+./openapi/node_modules/undici/docs/docs/api/Util.md
+./openapi/node_modules/undici/docs/docs/api/api-lifecycle.md
+./openapi/node_modules/undici/docs/docs/api/Client.md
+./openapi/node_modules/undici/docs/docs/api/ContentType.md
+./openapi/node_modules/undici/docs/docs/best-practices/mocking-request.md
+./openapi/node_modules/undici/docs/docs/best-practices/writing-tests.md
+./openapi/node_modules/undici/docs/docs/best-practices/client-certificate.md
+./openapi/node_modules/undici/docs/docs/best-practices/proxy.md
+./openapi/node_modules/undici/README.md
+./openapi/node_modules/get-intrinsic/CHANGELOG.md
+./openapi/node_modules/get-intrinsic/README.md
+./openapi/node_modules/mark.js/README.md
+./openapi/node_modules/mark.js/ISSUE_TEMPLATE.md
+./openapi/node_modules/mark.js/CONTRIBUTING.md
+./openapi/node_modules/path-browserify/CHANGELOG.md
+./openapi/node_modules/path-browserify/README.md
+./openapi/node_modules/path-browserify/security.md
+./openapi/node_modules/js-yaml/CHANGELOG.md
+./openapi/node_modules/js-yaml/README.md
+./openapi/node_modules/whatwg-url/README.md
+./openapi/node_modules/scheduler/README.md
+./openapi/node_modules/@humanwhocodes/momoa/README.md
+./openapi/node_modules/is-binary-path/readme.md
+./openapi/node_modules/yaml-ast-parser/README.md
+./openapi/node_modules/combined-stream/Readme.md
+./openapi/node_modules/pluralize/Readme.md
+./openapi/node_modules/slugify/README.md
+./openapi/node_modules/dunder-proto/CHANGELOG.md
+./openapi/node_modules/dunder-proto/README.md
+./openapi/node_modules/hasown/CHANGELOG.md
+./openapi/node_modules/hasown/README.md
+./openapi/node_modules/mime-types/HISTORY.md
+./openapi/node_modules/mime-types/README.md
+./openapi/node_modules/undici-types/README.md
+./openapi/node_modules/should/History.md
+./openapi/node_modules/should/Readme.md
+./openapi/node_modules/should/CONTRIBUTING.md
+./openapi/node_modules/wsl-utils/readme.md
+./openapi/node_modules/webidl-conversions/LICENSE.md
+./openapi/node_modules/webidl-conversions/README.md
+./openapi/node_modules/json-schema-traverse/README.md
+./openapi/node_modules/minimist/CHANGELOG.md
+./openapi/node_modules/minimist/README.md
+./openapi/node_modules/should-format/README.md
+./openapi/node_modules/chalk/readme.md
+./openapi/node_modules/json-pointer/Readme.md
+./openapi/node_modules/ansi-regex/readme.md
+./openapi/node_modules/has-flag/readme.md
+./openapi/node_modules/supports-color/readme.md
+./openapi/node_modules/@exodus/schemasafe/README.md
+./openapi/node_modules/core-js/stable/README.md
+./openapi/node_modules/core-js/full/README.md
+./openapi/node_modules/core-js/actual/README.md
+./openapi/node_modules/core-js/web/README.md
+./openapi/node_modules/core-js/README.md
+./openapi/node_modules/core-js/internals/README.md
+./openapi/node_modules/core-js/stage/README.md
+./openapi/node_modules/core-js/es/README.md
+./openapi/node_modules/core-js/modules/README.md
+./openapi/node_modules/color-convert/CHANGELOG.md
+./openapi/node_modules/color-convert/README.md
+./openapi/node_modules/eventemitter3/README.md
+./openapi/node_modules/readdirp/README.md
+./openapi/node_modules/mobx-react/CHANGELOG.md
+./openapi/node_modules/mobx-react/README.md
+./openapi/node_modules/brace-expansion/README.md
+./openapi/node_modules/fill-range/README.md
+./openapi/node_modules/binary-extensions/readme.md
+./openapi/node_modules/get-caller-file/LICENSE.md
+./openapi/node_modules/get-caller-file/README.md
+./openapi/node_modules/react-dom/README.md
+./openapi/node_modules/util-deprecate/History.md
+./openapi/node_modules/util-deprecate/README.md
+./openapi/node_modules/has-symbols/CHANGELOG.md
+./openapi/node_modules/has-symbols/README.md
+./openapi/node_modules/url-template/README.md
+./openapi/node_modules/url-template/uritemplate-test/README.md
+./openapi/node_modules/decko/README.md
+./openapi/node_modules/clsx/readme.md
+./openapi/node_modules/picocolors/README.md
+./openapi/node_modules/long/README.md
+./openapi/node_modules/default-browser-id/readme.md
+./openapi/node_modules/simple-websocket/README.md
+./openapi/node_modules/semver/README.md
+./openapi/node_modules/minimatch/README.md
+./openapi/node_modules/postcss-value-parser/README.md
+./openapi/node_modules/ansi-styles/readme.md
+./openapi/node_modules/shallowequal/README.md
+./openapi/node_modules/fast-uri/README.md
+./openapi/node_modules/handlebars/release-notes.md
+./openapi/node_modules/js-tokens/CHANGELOG.md
+./openapi/node_modules/js-tokens/README.md
+./openapi/node_modules/oas-validator/README.md
+./openapi/node_modules/@sinclair/typebox/readme.md
+./openapi/node_modules/should-type-adaptors/README.md
+./openapi/node_modules/oas-resolver/README.md
+./openapi/node_modules/@babel/runtime/README.md
+./openapi/node_modules/@babel/helper-validator-identifier/README.md
+./openapi/node_modules/@babel/code-frame/README.md
+./openapi/node_modules/is-number/README.md
+./openapi/node_modules/fs.realpath/README.md
+./openapi/node_modules/oas-schema-walker/README.md
+./openapi/node_modules/node-readfiles/README.md
+./openapi/node_modules/@jsep-plugin/assignment/README.md
+./openapi/node_modules/@jsep-plugin/regex/README.md
+./openapi/node_modules/protobufjs/google/README.md
+./openapi/node_modules/protobufjs/ext/descriptor/README.md
+./openapi/node_modules/protobufjs/ext/debug/README.md
+./openapi/node_modules/protobufjs/README.md
+./openapi/node_modules/should-type/README.md
+./openapi/node_modules/polished/LICENSE.md
+./openapi/node_modules/polished/README.md
+./openapi/node_modules/randombytes/README.md
+./openapi/node_modules/@faker-js/faker/CHANGELOG.md
+./openapi/node_modules/@faker-js/faker/CHANGELOG_old.md
+./openapi/node_modules/@faker-js/faker/README.md
+./openapi/node_modules/cliui/CHANGELOG.md
+./openapi/node_modules/cliui/README.md
+./openapi/node_modules/object-assign/readme.md
+./openapi/node_modules/get-proto/CHANGELOG.md
+./openapi/node_modules/get-proto/README.md
+./openapi/node_modules/form-data/CHANGELOG.md
+./openapi/node_modules/form-data/README.md
+./openapi/node_modules/yaml/README.md
+./openapi/node_modules/delayed-stream/Readme.md
+./openapi/node_modules/mobx/CHANGELOG.md
+./openapi/node_modules/mobx/README.md
+./openapi/node_modules/prop-types/node_modules/react-is/README.md
+./openapi/node_modules/prop-types/README.md
+./openapi/node_modules/yargs/CHANGELOG.md
+./openapi/node_modules/yargs/README.md
+./openapi/node_modules/asynckit/README.md
+./openapi/node_modules/event-target-shim/README.md
+./openapi/node_modules/glob/node_modules/brace-expansion/README.md
+./openapi/node_modules/glob/node_modules/minimatch/README.md
+./openapi/node_modules/glob/README.md
+./openapi/node_modules/cookie/README.md
+./openapi/node_modules/cookie/SECURITY.md
+./openapi/node_modules/neo-async/README.md
+./openapi/node_modules/to-regex-range/README.md
+./openapi/node_modules/source-map/CHANGELOG.md
+./openapi/node_modules/source-map/README.md
+./openapi/node_modules/default-browser/readme.md
+./openapi/node_modules/stickyfill/Readme.md
+./openapi/node_modules/pretty-format/node_modules/ansi-styles/readme.md
+./openapi/node_modules/pretty-format/README.md
+./openapi/node_modules/@protobufjs/inquire/README.md
+./openapi/node_modules/@protobufjs/utf8/README.md
+./openapi/node_modules/@protobufjs/path/README.md
+./openapi/node_modules/@protobufjs/base64/README.md
+./openapi/node_modules/@protobufjs/codegen/README.md
+./openapi/node_modules/@protobufjs/fetch/README.md
+./openapi/node_modules/@protobufjs/float/README.md
+./openapi/node_modules/@protobufjs/aspromise/README.md
+./openapi/node_modules/@protobufjs/pool/README.md
+./openapi/node_modules/@protobufjs/eventemitter/README.md
+./openapi/node_modules/gopd/CHANGELOG.md
+./openapi/node_modules/gopd/README.md
+./openapi/node_modules/run-applescript/readme.md
+./openapi/node_modules/uglify-js/README.md
+./openapi/node_modules/https-proxy-agent/README.md
+./openapi/node_modules/es6-promise/CHANGELOG.md
+./openapi/node_modules/es6-promise/README.md
+./openapi/node_modules/string-width/readme.md
+./openapi/node_modules/jsonpointer/LICENSE.md
+./openapi/node_modules/jsonpointer/README.md
+./openapi/node_modules/perfect-scrollbar/README.md
+./openapi/node_modules/concat-stream/readme.md
+./openapi/node_modules/wrappy/README.md
+./openapi/node_modules/@emotion/unitless/README.md
+./openapi/node_modules/@emotion/is-prop-valid/README.md
+./openapi/node_modules/is-extglob/README.md
+./openapi/node_modules/set-cookie-parser/README.md
+./openapi/node_modules/dompurify/README.md
+./openapi/node_modules/es-set-tostringtag/CHANGELOG.md
+./openapi/node_modules/es-set-tostringtag/README.md
+./openapi/node_modules/openapi-sampler/README.md
+./openapi/node_modules/colorette/LICENSE.md
+./openapi/node_modules/colorette/README.md
+./openapi/node_modules/react/README.md
+./openapi/node_modules/buffer-from/readme.md
+./openapi/node_modules/braces/README.md
+./openapi/node_modules/ajv/README.md
+./openapi/node_modules/mobx-react-lite/CHANGELOG.md
+./openapi/node_modules/mobx-react-lite/README.md
+./openapi/node_modules/emoji-regex/README.md
+./openapi/node_modules/open/readme.md
+./openapi/node_modules/readable-stream/GOVERNANCE.md
+./openapi/node_modules/readable-stream/README.md
+./openapi/node_modules/readable-stream/CONTRIBUTING.md
+./openapi/node_modules/jest-diff/README.md
+./openapi/node_modules/normalize-path/README.md
+./openapi/node_modules/fsevents/README.md
+./openapi/node_modules/ws/README.md
+./openapi/node_modules/fast-deep-equal/README.md
+./openapi/node_modules/require-from-string/readme.md
+./openapi/node_modules/debug/README.md
+./openapi/node_modules/glob-parent/CHANGELOG.md
+./openapi/node_modules/glob-parent/README.md
+./openapi/node_modules/source-map-js/README.md
+./openapi/node_modules/mime-db/HISTORY.md
+./openapi/node_modules/mime-db/README.md
+./openapi/node_modules/es-object-atoms/CHANGELOG.md
+./openapi/node_modules/es-object-atoms/README.md
+./openapi/node_modules/inflight/README.md
+./openapi/openapi/code_samples/README.md
+./openapi/openapi/paths/README.md
+./openapi/openapi/README.md
+./openapi/openapi/components/README.md
+./openapi/README.md
+./openapi/.github/pull_request_template.md
+./README.md
+./prompts/applied-prompts/add-customer/requirements.md
+./prompts/applied-prompts/add-customer/tasks.md
+./prompts/applied-prompts/add-customer/plan.md
+./prompts/applied-prompts/add-customer/prompts.md
+./prompts/applied-prompts/add-beer-name-query-param.md
+./prompts/applied-prompts/add-beer-style-query-param.md
+./prompts/applied-prompts/add-dtos/requirements.md
+./prompts/applied-prompts/add-dtos/tasks.md
+./prompts/applied-prompts/add-dtos/plan.md
+./prompts/applied-prompts/add-dtos/requirements-draft.md
+./prompts/applied-prompts/add-dtos/prompts.md
+./prompts/applied-prompts/add-beer-order-note-property.md
+./prompts/applied-prompts/create-beer-order/requiremets-draft.md
+./prompts/applied-prompts/create-beer-order/requirements.md
+./prompts/applied-prompts/create-beer-order/tasks.md
+./prompts/applied-prompts/create-beer-order/plan.md
+./prompts/applied-prompts/create-beer-order/prompts.md
+./prompts/applied-prompts/add-beer-order-shipment/requirements.md
+./prompts/applied-prompts/add-beer-order-shipment/tasks.md
+./prompts/applied-prompts/add-beer-order-shipment/plan.md
+./prompts/applied-prompts/add-beer-order-shipment/prompts.md
+./prompts/templates/smart-patch-operation.md
+./prompts/templates/prompt-template.md
+./prompts/templates/smart-add-property.md
+./prompts/templates/add-query-parameter.md
+./prompts/templates/add-beer-patch-operation.md
+./prompts/prompts.md

@@ -24,3 +24,25 @@ get:
     '404':
       description: Beer order not found
       $ref: ../components/responses/Problem.yaml
+patch:
+  tags:
+    - BeerOrder
+  summary: Partial update beer order
+  description: Update specific fields of an existing beer order.
+  operationId: patchBeerOrder
+  security: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/PatchBeerOrderCommand.yaml'
+  responses:
+    '204':
+      description: Order updated successfully.
+    '400':
+      description: Invalid request data
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Order not found
+      $ref: ../components/responses/Problem.yaml

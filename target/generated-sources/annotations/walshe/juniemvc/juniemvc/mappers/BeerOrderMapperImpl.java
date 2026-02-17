@@ -10,11 +10,12 @@ import walshe.juniemvc.juniemvc.entities.BeerOrder;
 import walshe.juniemvc.juniemvc.entities.BeerOrderLine;
 import walshe.juniemvc.juniemvc.models.BeerOrderDto;
 import walshe.juniemvc.juniemvc.models.BeerOrderLineDto;
+import walshe.juniemvc.juniemvc.models.PatchBeerOrderCommand;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-02-17T12:00:20+0000",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.2 (Amazon.com Inc.)"
+    date = "2026-02-17T12:16:02+0000",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.2 (Oracle Corporation)"
 )
 @Component
 public class BeerOrderMapperImpl implements BeerOrderMapper {
@@ -91,6 +92,26 @@ public class BeerOrderMapperImpl implements BeerOrderMapper {
         beerOrderLine.status( dto.getStatus() );
 
         return beerOrderLine.build();
+    }
+
+    @Override
+    public void updateBeerOrderFromPatch(PatchBeerOrderCommand command, BeerOrder entity) {
+        if ( command == null ) {
+            return;
+        }
+
+        if ( command.customerRef() != null ) {
+            entity.setCustomerRef( command.customerRef() );
+        }
+        if ( command.paymentAmount() != null ) {
+            entity.setPaymentAmount( command.paymentAmount() );
+        }
+        if ( command.status() != null ) {
+            entity.setStatus( command.status() );
+        }
+        if ( command.notes() != null ) {
+            entity.setNotes( command.notes() );
+        }
     }
 
     protected List<BeerOrderLineDto> beerOrderLineSetToBeerOrderLineDtoList(Set<BeerOrderLine> set) {

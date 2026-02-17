@@ -10,6 +10,8 @@ import org.springframework.web.client.RestClient;
 import walshe.juniemvc.juniemvc.entities.Beer;
 import walshe.juniemvc.juniemvc.models.BeerOrderDto;
 import walshe.juniemvc.juniemvc.models.CreateBeerOrderCommand;
+import walshe.juniemvc.juniemvc.models.PatchBeerOrderCommand;
+import walshe.juniemvc.juniemvc.repositories.BeerOrderRepository;
 import walshe.juniemvc.juniemvc.repositories.BeerRepository;
 
 import java.math.BigDecimal;
@@ -26,12 +28,16 @@ class BeerOrderControllerTest {
 
 
     @Autowired
+    BeerOrderRepository beerOrderRepository;
+
+    @Autowired
     BeerRepository beerRepository;
 
     Integer beerId;
 
     @BeforeEach
     void setUp() {
+        beerOrderRepository.deleteAll();
         beerRepository.deleteAll();
         Beer saved = beerRepository.save(Beer.builder()
                 .beerName("Test IPA")
@@ -86,5 +92,51 @@ class BeerOrderControllerTest {
         assertThat(listResp.getStatusCode().is2xxSuccessful()).isTrue();
         assertThat(listResp.getBody()).isNotNull();
         assertThat(listResp.getBody().size()).isGreaterThanOrEqualTo(1);
+    }
+
+    @Test
+    void patchOrder() {
+        String basePath = "/api/v1/beerOrder";
+
+        CreateBeerOrderCommand.CreateBeerOrderLineCommand line =
+                new CreateBeerOrderCommand.CreateBeerOrderLineCommand(beerId, 2);
+        CreateBeerOrderCommand createCmd = new CreateBeerOrderCommand("REF-PATCH", "Original notes", List.of(line));
+
+        RestClient client = RestClient.builder()
+                .baseUrl("http://localhost:" + port)
+                .build();
+
+        var createResp = client.post()
+                .uri(basePath)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(createCmd)
+                .retrieve()
+                .toEntity(BeerOrderDto.class);
+
+        var created = createResp.getBody();
+        assertThat(created).isNotNull();
+
+        // PATCH only the notes
+        PatchBeerOrderCommand patchCmd = new PatchBeerOrderCommand(null, null, null, "Updated notes");
+
+        var patchResp = client.patch()
+                .uri(basePath + "/" + created.getId())
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(patchCmd)
+                .retrieve()
+                .toBodilessEntity();
+
+        assertThat(patchResp.getStatusCode().is2xxSuccessful()).isTrue();
+
+        // Verify changes
+        var getResp = client.get()
+                .uri(basePath + "/" + created.getId())
+                .retrieve()
+                .toEntity(BeerOrderDto.class);
+
+        var updated = getResp.getBody();
+        assertThat(updated).isNotNull();
+        assertThat(updated.getNotes()).isEqualTo("Updated notes");
+        assertThat(updated.getCustomerRef()).isEqualTo("REF-PATCH"); // Should remain unchanged
     }
 }

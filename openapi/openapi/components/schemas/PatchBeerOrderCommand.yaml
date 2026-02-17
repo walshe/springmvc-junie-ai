@@ -1,0 +1,24 @@
+type: object
+properties:
+  customerRef:
+    type: string
+    description: Client-provided reference identifier for the order (e.g., purchase order number).
+    minLength: 1
+    example: "REF-001"
+  paymentAmount:
+    type: number
+    format: double
+    description: Total payment amount in USD for the entire order.
+    minimum: 0
+    example: 19.98
+  status:
+    type: string
+    description: Overall status of the order.
+    enum:
+      - PENDING
+      - DELIVERED
+    example: PENDING
+  notes:
+    type: string
+    description: Ad hoc notes about the order.
+    example: "Deliver after 5 PM"
