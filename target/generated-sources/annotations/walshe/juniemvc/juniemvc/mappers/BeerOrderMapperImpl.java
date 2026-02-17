@@ -13,8 +13,8 @@ import walshe.juniemvc.juniemvc.models.BeerOrderLineDto;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-02-15T19:57:18+0000",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.2 (Oracle Corporation)"
+    date = "2026-02-17T12:00:20+0000",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.2 (Amazon.com Inc.)"
 )
 @Component
 public class BeerOrderMapperImpl implements BeerOrderMapper {
@@ -32,6 +32,7 @@ public class BeerOrderMapperImpl implements BeerOrderMapper {
         beerOrderDto.customerRef( beerOrder.getCustomerRef() );
         beerOrderDto.paymentAmount( beerOrder.getPaymentAmount() );
         beerOrderDto.status( beerOrder.getStatus() );
+        beerOrderDto.notes( beerOrder.getNotes() );
         beerOrderDto.beerOrderLines( beerOrderLineSetToBeerOrderLineDtoList( beerOrder.getBeerOrderLines() ) );
         beerOrderDto.createdDate( beerOrder.getCreatedDate() );
         beerOrderDto.updateDate( beerOrder.getUpdateDate() );
@@ -50,6 +51,7 @@ public class BeerOrderMapperImpl implements BeerOrderMapper {
         beerOrder.customerRef( dto.getCustomerRef() );
         beerOrder.paymentAmount( dto.getPaymentAmount() );
         beerOrder.status( dto.getStatus() );
+        beerOrder.notes( dto.getNotes() );
         beerOrder.beerOrderLines( beerOrderLineDtoListToBeerOrderLineSet( dto.getBeerOrderLines() ) );
 
         return beerOrder.build();

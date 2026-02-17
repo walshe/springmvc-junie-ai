@@ -31,6 +31,10 @@ properties:
       - PENDING
       - DELIVERED
     example: PENDING
+  notes:
+    type: string
+    description: Ad hoc notes about the order.
+    example: "Deliver after 5 PM"
   beerOrderLines:
     type: array
     description: Line items in this order.

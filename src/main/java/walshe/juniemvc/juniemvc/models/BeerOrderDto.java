@@ -27,6 +27,8 @@ public class BeerOrderDto {
     // status of the order as a whole PENDING, DELIVERED
     private String status;
 
+    private String notes;
+
     private List<BeerOrderLineDto> beerOrderLines;
 
     //read only

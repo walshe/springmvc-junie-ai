@@ -8,6 +8,10 @@ properties:
     description: Client-provided reference identifier for the order (e.g., purchase order number).
     minLength: 1
     example: "REF-001"
+  notes:
+    type: string
+    description: Ad hoc notes about the order.
+    example: "Deliver after 5 PM"
   beerOrderLines:
     type: array
     description: Line items for the order.

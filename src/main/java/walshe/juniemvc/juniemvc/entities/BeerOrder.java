@@ -27,6 +27,7 @@ public class BeerOrder extends BaseEntity {
     private String customerRef;
     private BigDecimal paymentAmount;
     private String status;
+    private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id")

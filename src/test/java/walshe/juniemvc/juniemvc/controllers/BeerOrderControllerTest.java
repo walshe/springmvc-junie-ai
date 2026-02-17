@@ -49,7 +49,7 @@ class BeerOrderControllerTest {
 
         CreateBeerOrderCommand.CreateBeerOrderLineCommand line =
                 new CreateBeerOrderCommand.CreateBeerOrderLineCommand(beerId, 2);
-        CreateBeerOrderCommand cmd = new CreateBeerOrderCommand("REF-001", List.of(line));
+        CreateBeerOrderCommand cmd = new CreateBeerOrderCommand("REF-001", "Order notes", List.of(line));
 
         RestClient client = RestClient.builder()
                 .baseUrl("http://localhost:" + port)
@@ -66,6 +66,7 @@ class BeerOrderControllerTest {
         var created = createResp.getBody();
         assertThat(created).isNotNull();
         assertThat(created.getId()).isNotNull();
+        assertThat(created.getNotes()).isEqualTo("Order notes");
         assertThat(created.getBeerOrderLines()).hasSize(1);
 
         // GET created

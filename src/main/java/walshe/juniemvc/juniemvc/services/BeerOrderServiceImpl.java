@@ -45,6 +45,7 @@ class BeerOrderServiceImpl implements BeerOrderService {
     public BeerOrderDto createOrder(CreateBeerOrderCommand command) {
         BeerOrder order = BeerOrder.builder()
                 .customerRef(command.customerRef())
+                .notes(command.notes())
                 .build();
 
         if (command.beerOrderLines() != null) {
@@ -70,6 +71,7 @@ class BeerOrderServiceImpl implements BeerOrderService {
             found.setCustomerRef(dto.getCustomerRef());
             found.setPaymentAmount(dto.getPaymentAmount());
             found.setStatus(dto.getStatus());
+            found.setNotes(dto.getNotes());
             beerOrderRepository.save(found);
         });
     }
